@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Calculator</title>
+    <style>
+    body {
+        text-align: center;
+        font-family: arial, sans-serif;
+        background: #ddd;
+    }
+    main {
+        margin:10em auto;
+        padding:2em;
+        background:#FFF;
+        max-width: 40em;
+    }
+    #message {
+        border: 1px solid red;
+        padding:10px;
+        background: pink;
+        display:none;
+    }
+    #message.show{
+        display:block
+    }
+    </style>
+</head>
+
+<body>
+    <main>
+        <h1>Adder/Subtractor</h1>
+
+        <div>
+            <label for="xInput">X = <input id="xInput" placeholder=
+            "Enter an Integer" type="text"></label>
+        </div>
+
+        <div>
+            <label for="yInput"><label for="Enter a Integer">Y =
+            <input id="yInput" placeholder="Enter a Integer" type=
+            "text"></label></label>
+        </div>
+
+        <div>
+            <label for="Enter an Integer"><button id="plus"><label for=
+            "Enter an Integer">+</label><button id=
+            "minus">-</button></button></label>
+        </div>
+
+        <div id="text">
+            <span id="xNumber">X</span> <span id="operator">minus</span> <span id=
+            "yNumber">Y</span> is <span id="result">Z</span>
+        </div>
+
+        <div id="message"></div>
+    </main>
+    <script>
+    var Calculator = function () {
+        var xNumber = select('xNumber'),
+            yNumber = select('yNumber'),
+            operator = select('operator'),
+            result = select('result'),
+            xInput = select('xInput'),
+            yInput = select('yInput'),
+            operatorText = 'minus',
+            message = select('message'),
+            buttonPlus = select('plus'),
+            buttonMinus = select('minus');
+
+        function select(ID){
+            return document.getElementById(ID);
+        }
+
+        function getInputValue(ID){
+            var result = select(ID).value;
+            return parseInt(result);
+        }
+
+        function changeOperator(value){
+            operatorText = (value == 1) ? 'plus' : 'minus';
+            console.log(operatorText);
+        }
+
+        function displayMessage(errorMessage) {
+            if (errorMessage) {
+                message.innerHTML = errorMessage;
+                message.className = 'show';
+            } else {
+                message.innerHTML = '';
+                message.className = '';
+            }
+        }
+
+        function updateDOM(){
+            var x = getInputValue('xInput'),
+                y = getInputValue('yInput'),
+                sum = (operatorText == 'plus') ? x + y : x - y;
+
+            if(!x || !y || isNaN(x) || isNaN(y)){ displayMessage('Please fill both fields with numbers.');} else {
+                xNumber.innerHTML = x;
+                yNumber.innerHTML = y;
+                operator.innerHTML = operatorText;
+                result.innerHTML = sum;
+                displayMessage();
+                console.log(sum);
+            }
+        }
+
+        xInput.addEventListener("change", updateDOM, false);
+        yInput.addEventListener("change", updateDOM, false);
+
+        buttonPlus.addEventListener("click", function(){changeOperator(1); updateDOM();}, false);
+        buttonMinus.addEventListener("click", function(){changeOperator(-1); updateDOM();}, false);
+    }
+
+    var calculator = new Calculator();
+
+    </script>
+</body>
+</html>
