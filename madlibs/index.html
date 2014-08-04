@@ -1,33 +1,65 @@
 
-<p>Picture yourself in a {{noun}} on a river,  <br />
-With {{food}} trees and {{food}} skies <br />
-Somebody calls you, you {{verb}} quite {{adverb}}, <br />
-A girl with {{adjective} eyes.</p>
+<!DOCTYPE html ng-app>
+<html lang="en">
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.14/angular.min.js"></script>
+  <meta charset="UTF-8">
+  <title>ngMadlibs - Automate This!</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body ng-app>
+  <nav>
+<img src="ng-mad-libs-logo.png" />
+    <img src="mad-lib-happy-face.png" />
+  </nav>
+  <main ng-init="data">
+    <input type="text" placeholder="noun" ng-model="data.noun" />
+    <input type="text" placeholder="food" ng-model="data.food" />
+    <input type="text" placeholder="verb" ng-model="data.verb" />
+    <input type="text" placeholder="adverb" ng-model="data.adverb" />
+    <input type="text" placeholder="adjective" ng-model="data.adjective" />
+    <input type="text" placeholder="color" ng-model="data.color" />
+    <input type="text" placeholder="name" ng-model="data.name" />
+    <input type="text" placeholder="nouns" ng-model="data.nouns" />
+    <input type="text" placeholder="verbs" ng-model="data.verbs" />
+    <input type="text" placeholder="body part" ng-model="data.bodypart" />
+    <input type="text" placeholder="place" ng-model="data.place" />
+    <input type="text" placeholder="article of clothing" ng-model="data.articleofclothing" />
+    <p>Picture yourself in a {{data.noun}} on a river,  <br />
+With {{data.food}} trees and {{data.food}} skies <br />
+Somebody calls you, you {{data.verb}} quite {{data.adverb}}, <br />
+A girl with {{data.adjective}} eyes.</p>
 
-<p>Cellophane {{nouns}} of {{color}} and green,<br />
-{{verb}} over your head.<br />
-{{verb} for the girl with the {{noun}} in her eyes,<br />
+<p>Cellophane {{data.nouns}} of {{data.color}} and green,<br />
+{{data.verb}} over your head.<br />
+{{data.verb}} for the girl with the {{data.noun}} in her eyes,<br />
 And she`s gone.</p>
 
-<p>{{name}} in the sky with {{nouns}}...<br />
+<p>{{data.name}} in the sky with {{data.nouns}}...<br />
 in the sky with ...<br />
 in the sky with ...</p>
 
-<p>Follow her down to a {{noun}} by a fountain<br />
-Where rocking horse {{nouns}} eat {{noun}} pies,<br />
-Everyone {{noun}} as you {{verbs}} past the flowers,<br />
-That {{verb}} so incredibly high.</p>
+<p>Follow her down to a {{data.noun}} by a fountain<br />
+Where rocking horse {{data.nouns}} eat {{data.noun}} pies,<br />
+Everyone {{data.noun}} as you {{data.verbs}} past the flowers,<br />
+That {{data.verb}} so incredibly high.</p>
 
-<p>Newspaper {{nouns}} appear on the shore,<br />
+<p>Newspaper {{data.nouns}} appear on the shore,<br />
 Waiting to take you away.<br />
-Climb in the back with your {{bodypart}} in the clouds,<br />
+Climb in the back with your {{data.bodypart}} in the clouds,<br />
 And you`re gone.</p>
 
-<p>Picture yourself on a train in a {{place}},<br />
-With {{adjective} porters with looking glass {{article-of-clothing}},<br />
+<p>Picture yourself on a train in a {{data.place}},<br />
+With {{data.adjective}} porters with looking glass {{data.articleofclothing}},<br />
 Suddenly someone is there at the turnstile,<br />
 The girl with eyes.</p>
 
 <p>in the sky with ...<br />
 in the sky with ...<br />
 in the sky with ...</p>
+  </main>
+<script>
+
+</script>
+</body>
+</html>
