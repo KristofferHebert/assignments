@@ -1,11 +1,12 @@
 
-<!DOCTYPE html ng-app>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="en" ng-app="madLib">
 <head>
 <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.14/angular.min.js"></script>
   <meta charset="UTF-8">
   <title>ngMadlibs - Automate This!</title>
 <link rel="stylesheet" href="style.css">
+<script src="main.js" type="text/javascript"></script>
 </head>
 <body ng-app>
   <header>
@@ -14,7 +15,7 @@
   <img src="ng-mad-libs-logo.png" class="v-middle" />
   </section>
   </header>
-  <main ng-init="show=-1">
+  <main ng-controller="madlibCtrl">
     <form class="clearfix">
       <input type="text" placeholder="noun" ng-model="data.noun" />
       <input type="text" placeholder="food" ng-model="data.food" />
@@ -28,9 +29,9 @@
       <input type="text" placeholder="body part" ng-model="data.bodypart" />
       <input type="text" placeholder="place" ng-model="data.place" />
       <input type="text" placeholder="article of clothing" ng-model="data.articleofclothing" />
-      <button ng-click="show=0">Submit</button>
+      <button ng-click="submitForm()">Submit</button>
     </form>
-    <div ng-hide="show">
+    <div ng-show="show">
       <p>Picture yourself in a {{data.noun}} on a river,  <br />
       With {{data.food}} trees and {{data.food}} skies <br />
       Somebody calls you, you {{data.verb}} quite {{data.adverb}}, <br />
