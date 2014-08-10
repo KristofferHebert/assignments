@@ -1,6 +1,16 @@
 angular.module('madLib',[])
   .controller('madlibCtrl', function ($scope) {
       $scope.submitForm = function () {
-        $scope.show = 1;
+       if($scope.myForm.$valid) {
+            console.log('The form is valid');
+          } else {
+            console.log('The form is invalid');
+          }
+       $scope.submitted = true;
+      };
+      $scope.resetForm = function () {
+       $scope.data = "";
+       $scope.myForm.$setPristine();
+       $scope.submitted = false;
       };
   });

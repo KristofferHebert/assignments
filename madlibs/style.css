@@ -8,7 +8,17 @@ body {
 input {
   width: 46.44%;
   padding: .5em;
-  margin:.4em
+  margin:.4em;
+  border: 1px solid #ddd;
+  outline: none;
+  -webkit-transition: all 0.30s ease-in-out;
+  -moz-transition: all 0.30s ease-in-out;
+  -ms-transition: all 0.30s ease-in-out;
+  -o-transition: all 0.30s ease-in-out;
+}
+
+input:focus {
+  box-shadow: 0 0 2px #444;
 }
 
 header {
@@ -58,6 +68,11 @@ button {
   background-color: #dc1431;
   text-transform: uppercase;
   color: #fff;
+}
+
+input.ng-dirty.ng-invalid {
+  border: 1px solid #dc1431;
+  box-shadow: 0 0 2px #dc1431;
 }
 
 .left, input { float:left; }

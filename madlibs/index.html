@@ -16,22 +16,29 @@
   </section>
   </header>
   <main ng-controller="madlibCtrl">
-    <form class="clearfix">
-      <input type="text" placeholder="noun" ng-model="data.noun" />
-      <input type="text" placeholder="food" ng-model="data.food" />
-      <input type="text" placeholder="verb" ng-model="data.verb" />
-      <input type="text" placeholder="adverb" ng-model="data.adverb" />
-      <input type="text" placeholder="adjective" ng-model="data.adjective" />
-      <input type="text" placeholder="color" ng-model="data.color" />
-      <input type="text" placeholder="name" ng-model="data.name" />
-      <input type="text" placeholder="nouns" ng-model="data.nouns" />
-      <input type="text" placeholder="verbs" ng-model="data.verbs" />
-      <input type="text" placeholder="body part" ng-model="data.bodypart" />
-      <input type="text" placeholder="place" ng-model="data.place" />
-      <input type="text" placeholder="article of clothing" ng-model="data.articleofclothing" />
-      <button ng-click="submitForm()">Submit</button>
+    <form class="clearfix" ng-submit='submitForm();' name="myForm"  ng-hide="submitted && myForm.$valid" novalidate>
+      <h2>Provide the following words:</h2>
+      <input type="text" placeholder="noun" ng-model="data.noun" required/>
+      <input type="text" placeholder="food" ng-model="data.food" required/>
+      <input type="text" placeholder="verb" ng-model="data.verb" required/>
+      <input type="text" placeholder="adverb" ng-model="data.adverb" required/>
+      <input type="text" placeholder="adjective" ng-model="data.adjective" required/>
+      <input type="text" placeholder="color" ng-model="data.color" required/>
+      <input type="text" placeholder="name" ng-model="data.name" required/>
+      <input type="text" placeholder="nouns" ng-model="data.nouns" required/>
+      <input type="text" placeholder="verbs" ng-model="data.verbs" required/>
+      <input type="text" placeholder="body part" ng-model="data.bodypart" required/>
+      <input type="text" placeholder="place" ng-model="data.place" required/>
+      <input type="number" name="numberInput" placeholder="distance (must be number)" ng-model="data.number" required/>
+      <input type="text" placeholder="article of clothing" ng-model="data.articleofclothing" required/>
+      <button ng-click="submitForm()">Generate My Mad Lib</button>
     </form>
-    <div ng-show="show">
+
+    <p ng-if="submitted && myForm.$error.required">Please fill out all fields.</p>
+    <p ng-if="submitted && myForm.numberInput.$error">Distance input must be number</p>
+   <span class="error" ng-if="myForm.numberInput.$error.number">
+     Not valid number!</span>
+    <div ng-if="submitted && myForm.$valid">
       <p>Picture yourself in a {{data.noun}} on a river,  <br />
       With {{data.food}} trees and {{data.food}} skies <br />
       Somebody calls you, you {{data.verb}} quite {{data.adverb}}, <br />
@@ -57,6 +64,7 @@
       And you`re gone.</p>
 
       <p>Picture yourself on a train in a {{data.place}},<br />
+      {{data.number}} away...<br />
       With {{data.adjective}} porters with looking glass {{data.articleofclothing}},<br />
       Suddenly someone is there at the turnstile,<br />
       The girl with eyes.</p>
@@ -64,7 +72,11 @@
       <p>in the sky with ...<br />
       in the sky with ...<br />
       in the sky with ...</p>
+
+      <button ng-click="resetForm()">Start Over</button>
+
     </div>
+  </main>
   </section>
 <script>
 
