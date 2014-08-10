@@ -1,4 +1,4 @@
-angular.module('madLib',[])
+angular.module('madLib',['ngAnimate'])
   .controller('madlibCtrl', function ($scope) {
       $scope.submitForm = function () {
        if($scope.myForm.$valid) {

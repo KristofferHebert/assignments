@@ -3,12 +3,14 @@
 <html lang="en" ng-app="madLib">
 <head>
 <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.14/angular.min.js"></script>
+<script type="text/javascript"src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular-animate.js"></script>
+
   <meta charset="UTF-8">
   <title>ngMadlibs - Automate This!</title>
 <link rel="stylesheet" href="style.css">
 <script src="main.js" type="text/javascript"></script>
 </head>
-<body ng-app>
+<body ng-app="madLib">
   <header>
   <section>
   <img src="mad-lib-happy-face.png" class="left v-middle"/>
@@ -34,11 +36,9 @@
       <button ng-click="submitForm()">Generate My Mad Lib</button>
     </form>
 
-    <p ng-if="submitted && myForm.$error.required">Please fill out all fields.</p>
-    <p ng-if="submitted && myForm.numberInput.$error">Distance input must be number</p>
-   <span class="error" ng-if="myForm.numberInput.$error.number">
-     Not valid number!</span>
-    <div ng-if="submitted && myForm.$valid">
+    <p ng-show="submitted && myForm.$error.required" class="fadein">Please fill out all fields.</p>
+    <p ng-show="submitted && myForm.numberInput.$error" class="fadein">Distance input must be number</p>
+    <div ng-show="submitted && myForm.$valid" class="fadein">
       <p>Picture yourself in a {{data.noun}} on a river,  <br />
       With {{data.food}} trees and {{data.food}} skies <br />
       Somebody calls you, you {{data.verb}} quite {{data.adverb}}, <br />
