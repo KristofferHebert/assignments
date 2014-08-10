@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html lang="en" ng-app="waitStaff">
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.14/angular.min.js"></script>
+  <meta charset="UTF-8">
+  <title>Waitstaff Calculator</title>
+<link rel="stylesheet" href="style.css">
+<script src="main.js" type="text/javascript"></script>
+</head>
+<body ng-app>
+
+  <main ng-controller="waitStaffCtrl">
+    <form class="clearfix" ng-submit='submitForm();' name="mealDetails" novalidate>
+      <h1>Waitstaff Calculator</h1>
+      <div class="column left">
+        <section>
+          <h2>Enter the Meal Details</h2>
+          <label for="base"> Base Meal Price: $<input type="number" id="base" placeholder="9.99" ng-model="data.base" required/> </label>
+          <label for="tax"> Tax Rate: %<input type="number" id="tax" placeholder="" ng-model="data.tax" required/></label>
+          <label for="tax"> Tip Percentage: %<input type="number" placeholder="" ng-model="data.percentage" required/></label>
+          <div class="clearfix">
+            <button class="main" ng-disabled="mealDetails.$error.required" ng-click="submitForm()">Submit</button>
+            <button ng-click="resetForm()">Cancel</button>
+          </div>
+        </section>
+      </div>
+      <div class="column left" ng-init="setDefaultValues()">
+        <section>
+        <h2>Customer Charges</h2>
+        <p>Subtotal {{subTotal | currency}}</p>
+        <p>Tip {{ tip | currency }}</p>
+        <p>Total {{total | currency}}</p>
+        </section>
+        <section>
+        <h2>My Earnings Info</h2>
+        <p>Tip Total: {{tipTotal | currency}}</p>
+        <p>Meal Count: {{ mealCount | number }}</p>
+        <p>Average Tip Per Meal: {{ averageTip | currency}}</p>
+        <button class="main" ng-click="setDefaultValues()">Reset</button>
+        </section>
+
+      </div>
+    </form>
+  </main>
+<script>
+
+</script>
+</body>
+</html>
