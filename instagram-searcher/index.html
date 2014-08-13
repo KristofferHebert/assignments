@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.14/angular.min.js"></script>
+<script type="text/javascript"src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular-animate.js"></script>
+<script type="text/javascript" src="main.js"></script>
+<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <main ng-controller="myAppCtrl">
+    <form name="searchInstagram" novalidate>
+    <input type="text" name="query" ng-model="query" required/>
+    <input type="button" value="submit" ng-disabled="searchInstagram.$error.required" ng-click='submitQuery();'/>
+      {{searchInstagram.query.$error | json}}
+
+      <p ng-show="searchInstagram.$error.required" class="fadein">Please fill out all fields.</p>
+      <p ng-show="submitted && myForm.numberInput.$error" class="fadein">Distance input must be number</p>
+    </form>
+  <img ng-repeat="image in images" ng-src="{{image.images.standard_resolution.url}}" width="320" height="320" class="fadein thumbnail"/>
+  </main>
+</body>
+</html>

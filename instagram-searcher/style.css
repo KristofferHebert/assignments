@@ -1,0 +1,37 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+
+input.ng-invalid.ng-dirty {
+  border: 1px solid red;
+}
+
+.thumbnail {
+  float: left;
+  height: auto;
+  width: 25%;
+  border: 1px solid gray;
+  margin: -1px;
+}
+
+.fadein.ng-enter, .fadein.ng-leave {
+  opacity: 0;
+  -webkit-transition: .3s;
+     -moz-transition: .3s;
+      -ms-transition: .3s;
+       -o-transition: .3s;
+          transition: .3s
+}
+.fadein.ng-enter-stagger {
+  transition-delay: .1s;
+}
+.fadein.ng-enter-active {
+  opacity: 1;
+}
+.fadein.ng-leave {
+  opacity: 1;
+}
+.fadein.ng-leave-active {
+  opacity: 0;
+}
