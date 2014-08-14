@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en" ng-app="myApp">
 <head>
@@ -8,17 +9,22 @@
   <meta charset="UTF-8">
   <title>Document</title>
 </head>
-<body>
-  <main ng-controller="myAppCtrl">
-    <form name="searchInstagram" novalidate>
-    <input type="text" name="query" ng-model="query" required/>
-    <input type="button" value="submit" ng-disabled="searchInstagram.$error.required" ng-click='submitQuery();'/>
-      {{searchInstagram.query.$error | json}}
-
-      <p ng-show="searchInstagram.$error.required" class="fadein">Please fill out all fields.</p>
-      <p ng-show="submitted && myForm.numberInput.$error" class="fadein">Distance input must be number</p>
+<body ng-controller="myAppCtrl">
+  <header class="clearfix">
+    <form name="searchInstagram" novalidate class="wrapper center">
+    <input type="text" name="query" ng-model="query"class="w66 left" placeholder="search term" required />
+    <input type="button" value="submit" ng-disabled="searchInstagram.$error.required" class="w33 left" ng-click='submitQuery();' />
     </form>
-  <img ng-repeat="image in images" ng-src="{{image.images.standard_resolution.url}}" width="320" height="320" class="fadein thumbnail"/>
+  </header>
+  <section class="status fadein success center" ng-class="{warning: searchInstagram.$error.required}">
+      <p> </p>
+      <p ng-if="searchInstagram.$error.required">Please fill out all fields.</p>
+      <p ng-if="images.length"> {{images.length}} Results for '{{query}}'</p>
+      <p ng-if="images.length == 0">No Results for '{{query}}'</p>
+
+  </section>
+  <main>
+      <img ng-repeat="image in images" ng-src="{{image.images.standard_resolution.url}}" width="320" height="320" class="fadein thumbnail"/>
   </main>
 </body>
 </html>
