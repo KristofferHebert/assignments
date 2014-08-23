@@ -1,0 +1,147 @@
+body {
+    font-family: arial;
+    font-size: 1em;
+    background: #ddd;
+    padding: 1em;
+}
+header {
+    height: 200px;
+    background: #fff;
+    margin: -25px -25px 25px -25px;
+}
+header section {
+    height: 200px;
+    margin: 0 auto;
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+nav li {
+    float: left;
+    width: 33.1%;
+    border-right: 1px solid #ccc;
+    height: 2em;
+    line-height: 2em;
+}
+nav li:last-child {
+    border-right: none;
+}
+nav li a {
+    display: block;
+    background: #FFF;
+    text-decoration: none;
+}
+nav li a:hover, nav li a.active {
+    background: #dc1431;
+    color: #FFF;
+}
+main {
+    padding: 1em;
+    text-align: center;
+    border-radius: 1em;
+    -webkit-border-radius: 1em;
+    margin: 1em auto;
+    max-width: 35em;
+}
+section {
+    background: #fff;
+    padding: 1em;
+    margin: 1em;
+}
+form {
+    margin: 1em 0;
+    padding-bottom: 1.5em;
+}
+label {
+    display: block;
+    text-align: right;
+    font-size: .9em;
+}
+input {
+    max-width: 46.44%;
+    padding: .5em;
+    margin: .4em;
+    border: 1px solid #ddd;
+    outline: none;
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+}
+input:focus {
+    box-shadow: 0 0 2px #444;
+}
+button {
+    display: block;
+    width: 98.2%;
+    border: 0;
+    line-height: 2.5em;
+    margin: 1em 0 .5em;
+    background-color: #ddd;
+    color: #666;
+    text-transform: uppercase;
+    text-align: center;
+}
+button.main {
+    background-color: #dc1431;
+    color: #fff;
+}
+button.main[disabled="disabled"] {
+    background-color: #F4B8C1;
+}
+input.ng-dirty.ng-invalid {
+    border: 1px solid #dc1431;
+    box-shadow: 0 0 2px #dc1431;
+}
+h2 {
+    border-bottom: 1px solid #ccc;
+    font-weight: normal;
+    margin: 0 0 .7em;
+    padding-bottom: .5em;
+    font-size: 1.4em;
+    text-align: left;
+}
+h3 {
+    margin-top: 1.5em;
+}
+p {
+    margin-top: 1em;
+    line-height: 1.5em;
+    text-align: left;
+}
+.left {
+    float: left;
+}
+.alignleft {
+    text-align: left;
+}
+.alignright {
+    text-align: right;
+}
+.v-middle {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.column {
+    width: 50%;
+    text-align: left;
+}
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+.clearfix {
+    display: inline-block;
+}
+* html .clearfix {
+    height: 1%;
+}
+.clearfix {
+    display: block;
+}
