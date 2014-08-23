@@ -1,0 +1,153 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+
+body {
+    padding: 0;
+    margin: 0;
+    font-size: 1em;
+    font-family: 'Open Sans', sans-serif;
+    color: #fff;
+    background: #111;
+}
+
+header {
+    background: #333;
+    padding: 1em;
+}
+
+input {
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+    outline: none;
+    border: none;
+}
+
+input[type="submit"] {
+    height: 29px;
+    padding: 0;
+    margin-top: 2px;
+    margin-left: -3px;
+}
+
+input[type="text"], input[type="password"], input[type="email"], textarea, select {
+    border: 1px solid #ccc;
+    padding: 6px 4px;
+    outline: none;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    color: #777;
+    max-width: 100%;
+    display: block;
+    background: #fff;
+}
+
+input[type="text"]:focus, input[type="password"]:focus, input[type="email"]:focus, textarea:focus {
+    border: 1px solid #aaa;
+    color: #000;
+    -moz-box-shadow: 0 0 3px rgba(0,0,0,.2);
+    -webkit-box-shadow: 0 0 3px rgba(0,0,0,.2);
+    box-shadow: 0 0 3px rgba(0,0,0,.2);
+}
+
+input.ng-invalid.ng-dirty {
+    border: 1px solid red;
+}
+
+.status {
+    overflow: hidden;
+}
+
+.success {
+    background-color: #5cb85c;
+}
+
+.warning {
+    background-color: #f0ad4e;
+}
+
+.danger {
+    background-color: #d9534f;
+}
+
+.thumbnail {
+    float: left;
+    height: auto;
+    width: 25%;
+}
+
+.fadein.ng-enter, .fadein.ng-leave {
+    opacity: 0;
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -ms-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s;
+}
+
+.addspace {
+    margin: 1em;
+    padding: 1em;
+}
+
+.modal-bg {
+    background: rgba(0,0,0,.74);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 999;
+}
+
+.modal-bg-container {
+    background: #fff;
+    color: #000;
+    min-width: 40%;
+    height: 40%;
+    position: absolute;
+    top: 33%;
+    left: 33%;
+}
+
+.wrapper {
+    max-width: 60em;
+    margin: auto;
+}
+
+.w33 {
+    width: 32%;
+}
+
+.w66 {
+    width: 65%;
+}
+
+.left {
+    float: left;
+}
+
+.center {
+    text-align: center;
+}
+
+.clearfix {
+    clear: both;
+    overflow: hidden;
+}
+
+.fadein.ng-enter-stagger {
+    transition-delay: .1s;
+}
+
+.fadein.ng-enter-active {
+    opacity: 1;
+}
+
+.fadein.ng-leave {
+    opacity: 1;
+}
+
+.fadein.ng-leave-active {
+    opacity: 0;
+}
