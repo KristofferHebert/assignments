@@ -70,14 +70,12 @@ angular.module('waitStaff', ['ngRoute'])
     })
     .controller('mealCtrl', function($scope, Calculator) {
         $scope.data = Calculator.get();
-        console.log($scope.data);
         $scope.submitForm = function() {
             if ($scope.mealDetails.$valid) {
-                console.log('The form is valid');
                 Calculator.calculate();
                 $scope.resetForm();
             } else {
-                console.log('The form is invalid');
+                alert('The form is invalid');
             }
         };
         $scope.resetForm = function() {
