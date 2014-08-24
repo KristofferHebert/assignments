@@ -1,0 +1,25 @@
+<section>
+    <form class="clearfix" ng-submit='submitForm();' name="mealDetails" novalidate>
+
+        <h2>Enter the Meal Details</h2>
+        <label for="base">Base Meal Price: $
+            <input type="number" id="base" placeholder="9.99" ng-model="data.input.base" required/>
+        </label>
+        <label for="tax">Tax Rate: %
+            <input type="number" id="tax" placeholder="" ng-model="data.input.tax" required/>
+        </label>
+        <label for="tax">Tip Percentage: %
+            <input type="number" placeholder="" ng-model="data.input.percentage" required/>
+        </label>
+        <div class="clearfix">
+            <button class="main" ng-disabled="mealDetails.$error.required">Submit</button>
+            <button ng-click="resetForm()">Cancel</button>
+        </div>
+    </form>
+</section>
+<section ng-init="setDefaultValues()">
+    <h2>Customer Charges</h2>
+    <p>Subtotal {{data.subTotal | currency}}</p>
+    <p>Tip {{ data.tip | currency }}</p>
+    <p>Total {{data.total | currency}}</p>
+</section>

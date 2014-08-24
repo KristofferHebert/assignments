@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="waitStaff">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Waitstaff Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-route/angular-route.min.js"></script>
+    <script src="main.js" type="text/javascript"></script>
+</head>
+
+<body ng-app>
+    <main ng-controller="mainCtrl">
+        <h1>Waitstaff Calculator</h1>
+        <nav class="clearfix">
+            <ul>
+                <li><a href="./" ng-class="{active: $route.current.activetab == 'home'}">Home</a>
+                </li>
+                <li><a href="#/new-meal" ng-class="{active: $route.current.activetab == 'newmeal'}">New Meal</a>
+                </li>
+                <li><a href="#/my-earnings" ng-class="{active: $route.current.activetab == 'myearnings'}">My Earnings</a>
+                </li>
+            </ul>
+        </nav>
+        <div ng-view></div>
+    </main>
+</body>
+
+</html>
