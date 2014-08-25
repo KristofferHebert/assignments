@@ -1,0 +1,43 @@
+body, html {
+    position: relative;
+    height: 100%;
+}
+/* loading */
+
+.loading {
+    position: relative;
+    height: 100%;
+}
+.loading:before {
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: 0;
+    right: 0;
+    top: 0;
+    z-index: 999;
+    background: rgba(0, 0, 0, 0.5) no-repeat center center;
+    background-image: url('loading.gif');
+}
+/* animations */
+
+.fadein.ng-enter, .fadein.ng-leave {
+    opacity: 0;
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -ms-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s;
+}
+.fadein.ng-enter-stagger {
+    transition-delay: .1s;
+}
+.fadein.ng-enter-active {
+    opacity: 1;
+}
+.fadein.ng-leave {
+    opacity: 1;
+}
+.fadein.ng-leave-active {
+    opacity: 0;
+}
