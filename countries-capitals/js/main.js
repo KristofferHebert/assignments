@@ -1,5 +1,6 @@
 (function() {
-    angular.module('App', ['ngRoute', 'ngAnimate'])
+    'use strict'
+    angular.module('mainApp', ['ngRoute', 'ngResource', 'ngAnimate'])
         .run(function($rootScope, $location, $timeout) {
             $rootScope.$on('$routeChangeError', function() {
                 $location.path("/error");
@@ -16,7 +17,7 @@
         .config(function($routeProvider) {
             $routeProvider
                 .when('/', {
-                    templateUrl: 'home.html'
+                    templateUrl: 'partials/home.html'
                 })
                 .when('/countries', {
                     templateUrl: 'partials/countries.html',
@@ -33,7 +34,44 @@
                     redirectTo: '/error'
                 });
         })
-        .factory()
-        .controller()
+        .factory('geoApi', ['$http', '$route',
+            function($http, $route) {
 
+                return ({
+                    getCountries: getCountries
+                });
+
+                function getCountries() {
+                    var endpoint = "http://api.geonames.org/countryInfoJSON?username=hirekris";
+                    return $http({
+                            method: 'GET',
+                            cache: true,
+                            url: endpoint
+                        })
+                        .then(success, error);
+                };
+
+                function success(response) {
+                    return (response.data);
+                }
+
+                function error(response) {
+                    throw (response.data.message);
+                }
+            }
+        ])
+        .controller('countriesCtrl', function($scope, geoApi) {
+            geoApi.getCountries()
+                .then(function(response) {
+                    $scope.countries = response.geonames;
+                });
+
+            $scope.countryInfo = function(countryCode) {
+                alert(countryCode);
+            }
+
+        })
+        .controller('countryCtrl', function($scope, geoApi) {
+
+        });
 })();

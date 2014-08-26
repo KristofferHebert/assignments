@@ -10,7 +10,6 @@
     <script src="bower_components/angular-animate/angular-animate.min.js"></script>
     <script src="js/main.js" type="text/javascript"></script>
     <link rel="stylesheet" type="text/css" href="bower_components/purecss/src/base/css/base.css">
-    <link rel="stylesheet" type="text/css" href="bower_components/purecss/src/grids/css/grids-core.css">
     <link rel="stylesheet" type="text/css" href="bower_components/purecss/src/tables/css/tables.css">
     <link rel="stylesheet" type="text/css" href="bower_components/purecss/src/buttons/css/buttons-core.css">
     <link rel="stylesheet" href="css/style.css">
@@ -18,10 +17,15 @@
 
 <body>
     <nav>
-        <h1 class="text-center">Countries & Capitals</h1>
+        <h1 class="text-center">
+            <a href="./">Countries & Capitals</a>
+        </h1>
     </nav>
     <div class="row">
-        <div class="large-8 columns fadein large-centered" ng-view></div>
+        <div class="fadein" ng-view></div>
+        <p class="center">
+            <a href="./" class="left button">Home</a><a href="#/countries" class="button">Browse Countries</a>
+        </p>
     </div>
 </body>
 

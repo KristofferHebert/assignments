@@ -1,6 +1,27 @@
 body, html {
     position: relative;
     height: 100%;
+    font-family: arial, sans-serif;
+    font-size: 1em;
+    background: #ddd;
+}
+a {
+    text-decoration: none;
+}
+table {
+    font-size: 90%;
+    width: 100%;
+}
+th {
+    background: #999;
+    font-size: .9em;
+    padding: .4em;
+}
+tr {
+    text-align: center;
+}
+tr td {
+    padding: .6em .2em;
 }
 /* loading */
 
@@ -40,4 +61,42 @@ body, html {
 }
 .fadein.ng-leave-active {
     opacity: 0;
+}
+/* grid */
+
+.row {
+    max-width: 50em;
+    margin: auto;
+}
+/* helper classes */
+
+.button {
+    display: inline-block;
+    color: #FFF;
+    width: 10em;
+    height: 1em;
+    padding: 1em;
+    background: #dc1431;
+    text-align: center;
+}
+.left {
+    float: left;
+}
+.white {
+    color: #FFF;
+}
+.center {
+    margin: auto;
+}
+.text-center {
+    text-align: center;
+}
+.text-left {
+    text-align: left;
+}
+.scroll {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 40em;
+    border: 1px solid #999;
 }
