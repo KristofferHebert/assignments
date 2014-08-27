@@ -17,7 +17,8 @@
         .config(function($routeProvider) {
             $routeProvider
                 .when('/', {
-                    templateUrl: 'partials/home.html'
+                    templateUrl: 'partials/home.html',
+                    controller: 'homeCtrl'
                 })
                 .when('/countries', {
                     templateUrl: 'partials/countries.html',
@@ -60,7 +61,13 @@
                 }
             }
         ])
-        .controller('countriesCtrl', function($scope, geoApi) {
+        .controller('homeCtrl', function($scope, $rootScope, geoApi) {
+            $rootScope.button = {
+                home: false,
+                browse: true
+            }
+        })
+        .controller('countriesCtrl', function($scope, $rootScope, geoApi) {
             geoApi.getCountries()
                 .then(function(response) {
                     $scope.countries = response.geonames;
@@ -69,9 +76,13 @@
             $scope.countryInfo = function(countryCode) {
                 alert(countryCode);
             }
+            $rootScope.button = {
+                home: true,
+                browse: false
+            }
 
         })
-        .controller('countryCtrl', function($scope, geoApi) {
+        .controller('countryCtrl', function($scope, $rootScope, geoApi) {
 
         });
 })();

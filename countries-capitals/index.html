@@ -22,9 +22,10 @@
         </h1>
     </nav>
     <div class="row">
-        <div class="fadein" ng-view></div>
+        <div ng-view></div>
         <p class="center">
-            <a href="./" class="left button">Home</a><a href="#/countries" class="button">Browse Countries</a>
+            <a href="./" class="left button" ng-if="button.home">Home</a>
+            <a href="#/countries" class="button" ng-if="button.browse">Browse Countries</a>
         </p>
     </div>
 </body>
