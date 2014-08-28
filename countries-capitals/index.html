@@ -21,13 +21,13 @@
             <a href="./">Countries & Capitals</a>
         </h1>
     </nav>
-    <div class="row">
-        <div ng-view></div>
-        <p class="center">
-            <a href="./" class="left button" ng-if="button.home">Home</a>
+    <main class="row">
+        <section ng-view class="fadein"></section>
+        <nav class="center text-center clearfix">
+            <a href="./" class="button" ng-if="button.home">Home</a>
             <a href="#/countries" class="button" ng-if="button.browse">Browse Countries</a>
-        </p>
-    </div>
+        </nav>
+    </main>
 </body>
 
 </html>

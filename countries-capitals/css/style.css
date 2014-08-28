@@ -23,6 +23,11 @@ tr {
 tr td {
     padding: .6em .2em;
 }
+nav {
+    line-height: 50px;
+    height: 50px;
+    margin-top: 40px;
+}
 /* loading */
 
 .loading {
@@ -71,13 +76,16 @@ tr td {
 /* helper classes */
 
 .button {
-    display: inline-block;
+    display: inline;
     color: #FFF;
     width: 10em;
     height: 1em;
     padding: 1em;
     background: #dc1431;
     text-align: center;
+}
+.button:hover {
+    background: #E4445B;
 }
 .left {
     float: left;
@@ -86,7 +94,7 @@ tr td {
     color: #FFF;
 }
 .center {
-    margin: auto;
+    margin: inherit auto;
 }
 .text-center {
     text-align: center;
@@ -99,4 +107,21 @@ tr td {
     overflow-x: hidden;
     height: 40em;
     border: 1px solid #999;
+}
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+.clearfix {
+    display: inline-block;
+}
+* html .clearfix {
+    height: 1%;
+}
+.clearfix {
+    display: block;
 }

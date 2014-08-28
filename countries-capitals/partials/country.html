@@ -1,0 +1,28 @@
+<h2 class="text-center">{{country.countryName}}</h2>
+<table class="pure-table-striped text-center">
+    <tr>
+        <td width="23%">Population:</td>
+        <td>{{country.population | number}}</td>
+    </tr>
+    <tr>
+        <td>Area:</td>
+        <td>{{country.areaInSqKm | number}}</td>
+    </tr>
+    <tr>
+        <td>Capital:</td>
+        <td>{{country.capital}}</td>
+    </tr>
+    <tr>
+        <td>Population of Capital:</td>
+        <td>{{capitalPopulation | number}}</td>
+    </tr>
+    <tr>
+        <td>{{neighbours.length}} neighbors:</td>
+        <td>
+            <ul>
+                <li ng-repeat="neighbor in neighbours"><a href="#/countries/{{neighbor.countryCode}}">{{neighbor.countryName}}</a>
+                </li>
+            </ul>
+        </td>
+    </tr>
+</table>

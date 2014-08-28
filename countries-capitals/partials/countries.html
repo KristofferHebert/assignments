@@ -10,12 +10,13 @@
 </table>
 <section class="scroll">
     <table class="pure-table-striped text-center">
-        <tr ng-repeat="country in countries | orderBy:'countryName'" ng-click="countryInfo(countries[$index].countryCode)">
+        <tr ng-repeat="country in countries | orderBy:'countryName'" ng-click="countryInfo(country.countryCode)">
             <td class="text-left" width="20%">{{country.countryName}}</td>
             <td width="13%">{{country.countryCode | uppercase}}</td>
             <td width="13%">{{country.capital}}</td>
             <td width="13%">{{country.areaInSqKm | number}}</td>
-            <td width="13%">{{country.population | number}}</td>
+            <td width="13%">{{country.population
+ | number}}</td>
             <td width="13%">{{country.continent | uppercase}}</td>
         </tr>
     </table>
