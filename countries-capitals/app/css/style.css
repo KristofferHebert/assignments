@@ -1,0 +1,127 @@
+body, html {
+    position: relative;
+    height: 100%;
+    font-family: arial, sans-serif;
+    font-size: 1em;
+    background: #ddd;
+}
+a {
+    text-decoration: none;
+}
+table {
+    font-size: 90%;
+    width: 100%;
+}
+th {
+    background: #999;
+    font-size: .9em;
+    padding: .4em;
+}
+tr {
+    text-align: center;
+}
+tr td {
+    padding: .6em .2em;
+}
+nav {
+    line-height: 50px;
+    height: 50px;
+    margin-top: 40px;
+}
+/* loading */
+
+.loading {
+    position: relative;
+    height: 100%;
+}
+.loading:before {
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: 0;
+    right: 0;
+    top: 0;
+    z-index: 999;
+    background: rgba(0, 0, 0, 0.5) no-repeat center center;
+    background-image: url('/images/spinner.gif');
+}
+/* animations */
+
+.fadein.ng-enter, .fadein.ng-leave {
+    opacity: 0;
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -ms-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s;
+}
+.fadein.ng-enter-stagger {
+    transition-delay: .1s;
+}
+.fadein.ng-enter-active {
+    opacity: 1;
+}
+.fadein.ng-leave {
+    opacity: 1;
+}
+.fadein.ng-leave-active {
+    opacity: 0;
+}
+/* grid */
+
+.row {
+    max-width: 50em;
+    margin: auto;
+}
+/* helper classes */
+
+.button {
+    display: inline;
+    color: #FFF;
+    width: 10em;
+    height: 1em;
+    padding: 1em;
+    background: #dc1431;
+    text-align: center;
+}
+.button:hover {
+    background: #E4445B;
+}
+.left {
+    float: left;
+}
+.white {
+    color: #FFF;
+}
+.center {
+    margin: inherit auto;
+}
+.text-center {
+    text-align: center;
+}
+.text-left {
+    text-align: left;
+}
+.scroll {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 40em;
+    border: 1px solid #999;
+}
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+.clearfix {
+    display: inline-block;
+}
+* html .clearfix {
+    height: 1%;
+}
+.clearfix {
+    display: block;
+}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="App" ng-class="{loading:isLoading}">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Countries & Capitals</title>
+    <script src="./_assets/combined-6c91c50d.js"></script>
+    <link rel="stylesheet" href="./_assets/combined-2fac027c.css"/>
+</head>
+
+<body>
+    <nav>
+        <h1 class="text-center">
+            <a href="./">Countries & Capitals</a>
+        </h1>
+    </nav>
+    <main class="row">
+        <section ng-view></section>
+        <nav class="center text-center clearfix">
+            <a href="./" class="button" ng-if="button.home">Home</a>
+            <a href="#/countries" class="button" ng-if="button.browse">Browse Countries</a>
+        </nav>
+    </main>
+</body>
+
+</html>

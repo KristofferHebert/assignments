@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="App" ng-class="{loading:isLoading}">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Countries & Capitals</title>
+    <!-- build:js ./_assets/combined.js -->
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-route/angular-route.min.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.min.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.min.js"></script>
+    <script src="js/app.js" type="text/javascript"></script>
+    <script src="js/factory/app-GeoApi.js" type="text/javascript"></script>
+    <script src="js/controller/app-controllers.js" type="text/javascript"></script>
+    <!-- endbuild  -->
+    <!-- build:css ./_assets/combined.css -->
+    <link rel="stylesheet" type="text/css" href="bower_components/purecss/src/base/css/base.css">
+    <link rel="stylesheet" type="text/css" href="bower_components/purecss/src/tables/css/tables.css">
+    <link rel="stylesheet" type="text/css" href="bower_components/purecss/src/buttons/css/buttons-core.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- endbuild  -->
+</head>
+
+<body>
+    <nav>
+        <h1 class="text-center">
+            <a href="./">Countries & Capitals</a>
+        </h1>
+    </nav>
+    <main class="row">
+        <section ng-view></section>
+        <nav class="center text-center clearfix">
+            <a href="./" class="button" ng-if="button.home">Home</a>
+            <a href="#/countries" class="button" ng-if="button.browse">Browse Countries</a>
+        </nav>
+    </main>
+</body>
+
+</html>
