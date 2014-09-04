@@ -1,7 +1,7 @@
 (function () {
     'use strict';
     angular.module('App.factories', [])
-        .factory('GeoAPI', ['$http', '$route',
+        .factory('GeoAPI', ['$http',
             function ($http) {
                 function request(endpoint) {
                     return $http({
