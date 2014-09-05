@@ -1,0 +1,28 @@
+body {
+    font-family: arial, san-serif;
+    font-size: 1em;
+    width: 40em;
+    margin: auto;
+}
+span.edit, span.save {
+    float: right;
+}
+span.edit a, span.save a {
+    background: #ddd;
+    padding: .5em;
+    display: block;
+    margin: .1em;
+    cursor: pointer;
+}
+span.edit a {
+    background: green;
+    color: #FFF;
+}
+div.save, div.edit {
+    padding: 1em;
+    margin-bottom: 1em;
+}
+div.save {} div.edit {
+    border: 1px solid red;
+    background: #ddd;
+}

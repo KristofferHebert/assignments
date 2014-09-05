@@ -1,0 +1,5 @@
+<section>
+    <span ng-class="editable ? 'edit' : 'save'"><a ng-click="toggle()">{{state}}</a>
+    </span>
+    <div ng-class="editable ? 'edit' : 'save'" contenteditable="{{editable}}" ng-transclude></div>
+</section>
