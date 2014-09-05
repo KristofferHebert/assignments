@@ -21,13 +21,15 @@ describe('App.controllers: homeCtrl', function () {
 
 
 describe('App.controllers: countriesCtrl', function () {
-    beforeEach(module('App.controllers'));
+    beforeEach(module('App.controllers', 'App.factories'));
     describe('countriesCtrl', function () {
-        var ctrl, scope;
-        beforeEach(inject(function ($controller, $rootScope) {
+        var ctrl, scope, service;
+        beforeEach(inject(function ($controller, $rootScope, GeoAPI) {
+            service = GeoAPI;
             scope = $rootScope.$new();
             ctrl = $controller('countriesCtrl', {
-                $scope: scope
+                $scope: scope,
+                GeoAPI: service
             });
         }));
 

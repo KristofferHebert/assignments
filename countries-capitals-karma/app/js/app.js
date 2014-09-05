@@ -32,7 +32,7 @@
                         controller: 'countryCtrl'
                     })
                     .when('/error', {
-                        template: 'partials/error.html'
+                        templateUrl: 'partials/error.html'
                     })
                     .otherwise({
                         redirectTo: '/error'
