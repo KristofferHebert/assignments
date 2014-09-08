@@ -2,8 +2,6 @@ describe('Testing for signup directive', function () {
     var element, scope, input;
 
     beforeEach(module('app'));
-    beforeEach(module('opt-in.html'));
-
     beforeEach(inject(function ($rootScope, $compile) {
         element = angular.element(
             '<form action="#">' +

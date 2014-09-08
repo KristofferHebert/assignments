@@ -15,9 +15,13 @@ module.exports = function (config) {
 
         // list of files / patterns to load in the browser
         files: [
-            'bower_components/angular/angular.min.js',
-            'bower_components/angular-mocks/angular-mocks.js',
-            'mainSpec.js'
+            'app/bower_components/angular/angular.min.js',
+            'app/bower_components/jquery/dist/jquery.min.js',
+            'app/app/bower_components/angular-mocks/angular-mocks.js',
+            'app/bower_components/angular/angular.min.js',
+            'app/bower_components/angular-mocks/angular-mocks.js',
+            'app/*.js', // this will pick up both spec and app
+            'app/*.html' // for our directive templates
         ],
 
 
@@ -27,8 +31,14 @@ module.exports = function (config) {
 
         // preprocess matching files before serving them to the browser
         // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
-        preprocessors: {},
+        preprocessors: {
+            'app/*.html': 'html2js'
+        },
 
+        ngHtml2JsPreprocessor: {
+            // strip app from the file path
+            stripPrefix: 'app/'
+        },
 
         // test results reporter to use
         // possible values: 'dots', 'progress'
