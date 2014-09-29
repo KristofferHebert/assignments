@@ -1,0 +1,7 @@
+<h1 id="hello">Hello!</h1>
+<h2>Stay Chain helps you stay commited to a good habit.</h2>
+<form id="startchain" novalidate>
+    <textarea name="goal-summary" class="g-wide--full" rows="4" cols="50" placeholder="I want too..." ng-model="chainDescription"></textarea>
+    <input ng-hide="auth.signedIn()" class="button--primary g-wide--full" type="submit" value="Sign up" ng-click="toggleModal('showSignUp')" />
+    <input ng-if="auth.signedIn()" class="button--primary g-wide--full" type="submit" value="Start Chain" ng-click="startChain(chainDescription)" />
+</form>
