@@ -7,8 +7,8 @@
 /*==========  VARIABLES  ==========*/
 
   // Defining breakpoints
-  $medium: 620px !default;
-  $wide: 800px !default;
+  $medium: 320px !default;
+  $wide: 600px !default;
   $huge: 1600px !default;
   $mediumContainer: 688px !default;
   $wideContainer: 864px !default;
@@ -22,7 +22,7 @@
   $wideGutterWidth: 3.7% !default;
 
   // Defining colors
-  $colorBlue: #3372df !default;
+  $colorBlue: #335898 !default;
   $colorBlueSecondary: lighten($colorBlue, 30%) !default;
   $colorGreen: #0f9d58 !default;
   $colorGreenSecondary: lighten($colorGreen, 30%) !default;

@@ -51,7 +51,7 @@
             </li>
             <li ng-if="signIn()"><a ng-click="toggleModal('showLogOut')">Log out</a>
             </li>
-            <li ng-hide="signIn()"><a ng-click="toggleModal('showSignUp')">Sign up</a>
+            <li ng-hide="signIn()"><a href="/">Sign up</a>
             </li>
         </ul>
     </nav>
@@ -74,18 +74,17 @@
                         </div>
                         <div class="clear">
                             <label for="" class="g-wide--1 hidden">Password</label>
-                            <input type="password" name="password" class="g-wide--full" placeholder="Password" ng-model="user.password
-" ng-change="checkPassword(user, signup)" ng-min="5" required>
+                            <input type="password" name="password" class="g-wide--full" placeholder="Password" ng-model="user.password" ng-min="5" required>
                         </div>
                         <div class="clear">
                             <label for="" class="g-wide--1 hidden">Confirm Password</label>
-                            <input type="password" name="repeatPassword" class="g-wide--full" placeholder="Confirm Password" ng-model="user.repeatPassword" required>
-                            <span class="msg-error" ng-show="signup.repeatPassword.$error.pwmatch">
+                            <input type="password" name="repeatPassword" class="g-wide--full" placeholder="Confirm Password" ng-model="user.repeatPassword" ng-change="checkPassword(user, signup)" required>
+                            <span class="msg-error" ng-show="signup.repeatPassword.$error.match">
                                 Passwords don't match.
                             </span>
                         </div>
                         <div class="clear">
-                            <input type="submit" class="button button--primary g--half" value="Signup" ng-click="signUp(user)" ng-disabled="signup.$invalid">
+                            <input type="submit" class="button button--primary g--half" value="Signup" ng-click="signUp(user, chainDescription)" ng-disabled="signup.$invalid">
                             <input type="button" class="button button--secondary g--half g--last" value="Reset" ng-click="resetForm()">
                         </div>
                     </form>
@@ -117,13 +116,18 @@
     <main ng-controller="mainCtrl">
         <div ng-view></div>
     </main>
-    <!-- build:js scripts/main.min.js -->
     <script src="scripts/lib/angular/angular.min.js"></script>
     <script src="scripts/lib/angular-route/angular-route.min.js"></script>
     <script src="scripts/lib/firebase/firebase.js"></script>
     <script src="scripts/lib/angularfire/dist/angularfire.min.js"></script>
     <script src="https://cdn.firebase.com/js/simple-login/1.6.3/firebase-simple-login.js"></script>
+
+    <!-- build:js scripts/main.min.js -->
     <script src="scripts/main.js"></script>
+    <script src="scripts/controllers.js"></script>
+    <script src="scripts/factories.js"></script>
+    <script src="scripts/directives.js"></script>
+    <script src="scripts/filters.js"></script>
     <!-- endbuild -->
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
@@ -134,7 +138,7 @@
             (i[r].q = i[r].q || []).push(arguments)
         }, i[r].l = 1 * new Date();
         a = s.createElement(o),
-        m = s.getElementsByTagName(o)[0];
+            m = s.getElementsByTagName(o)[0];
         a.async = 1;
         a.src = g;
         m.parentNode.insertBefore(a, m)
@@ -142,7 +146,7 @@
     ga('create', 'UA-XXXXX-X', 'auto');
     ga('send', 'pageview');
     </script>
-    <!-- Built with love using Web Starter Kit -->
+
 </body>
 
 </html>

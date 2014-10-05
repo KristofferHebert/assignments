@@ -299,8 +299,8 @@ main {
     left: 50%;
     top: 50%;
     padding: 25px;
-    max-width: 50%;
-    min-width: 40%;
+    max-width: 60%;
+    min-width: 18.75em;
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     border-radius: 2px;
@@ -328,9 +328,10 @@ input[type="text"],input[type="email"],input[type="password"] {
     padding: .5em;
     margin-bottom: .5em;
     border: 1px solid #ccc;
+    width: 100%;
 }
 
-input {
+input, textarea {
     font-weight: normal;
     outline: none;
     &.ng-dirty.ng-invalid {
@@ -338,7 +339,7 @@ input {
         -webkit-box-shadow: 0px 0px 2px red;
                 box-shadow: 0px 0px 2px red;
     }
-    &.ng-dirty.ng-valid {
+    &.ng-dirty.ng-valid, &:focus {
         border-color: green;
         -webkit-box-shadow: 0px 0px 2px green;
                 box-shadow: 0px 0px 2px green;
@@ -351,12 +352,47 @@ input {
     }
 }
 
+// chain
+
+.chain, .streak:first-child .chain:first-child, .streak:last-child .chain:last-child{
+  background: url('../images/chain.png') no-repeat top left;
+  width:100px;
+  height:43px;
+  display: inline-block;
+  &.break {
+      background-image: url('../images/chain-break.png');
+  }
+}
+
+.streak:first-child .chain:first-child {
+  background-image: url('../images/chain-begin.png');
+}
+
+.streak:last-child .chain:last-child {
+  background-image: url('../images/chain-end.png');
+}
+
+.m1 {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+.mt1 {
+  margin-top: 1em;
+}
+.mb1 {
+  margin-bottom: 1em;
+}
+
+.center-text{
+    text-align: center;
+}
+
 .fright {
   float: right;
 }
 
 .fleft {
-  float: leftt;
+  float: left;
 }
 
 /** Larger Screens - desktops and tablets **/

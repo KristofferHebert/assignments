@@ -626,14 +626,14 @@ pre {
   margin-left: auto;
   margin-right: auto;
 }
-@media only screen and (min-width: 620px) {
+@media only screen and (min-width: 320px) {
   .main-container {
     padding-left: 4.8%;
     padding-right: 4.8%;
     max-width: 688px;
   }
 }
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 600px) {
   .main-container {
     padding-left: 4.4%;
     padding-right: 4.4%;
@@ -649,14 +649,14 @@ pre {
   margin-left: auto;
   margin-right: auto;
 }
-@media only screen and (min-width: 620px) {
+@media only screen and (min-width: 320px) {
   .container {
     padding-left: 4.8%;
     padding-right: 4.8%;
     max-width: 688px;
   }
 }
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 600px) {
   .container {
     padding-left: 4.4%;
     padding-right: 4.4%;
@@ -664,7 +664,7 @@ pre {
   }
 }
 
-@media only screen and (min-width: 620px) {
+@media only screen and (min-width: 320px) {
   .container-medium {
     box-sizing: content-box;
     position: relative;
@@ -674,14 +674,14 @@ pre {
     margin-right: auto;
   }
 }
-@media only screen and (min-width: 620px) and (min-width: 620px) {
+@media only screen and (min-width: 320px) and (min-width: 320px) {
   .container-medium {
     padding-left: 4.8%;
     padding-right: 4.8%;
     max-width: 688px;
   }
 }
-@media only screen and (min-width: 620px) and (min-width: 800px) {
+@media only screen and (min-width: 320px) and (min-width: 600px) {
   .container-medium {
     padding-left: 4.4%;
     padding-right: 4.4%;
@@ -689,7 +689,7 @@ pre {
   }
 }
 
-@media only screen and (max-width: 619px) {
+@media only screen and (max-width: 319px) {
   .container-small {
     box-sizing: content-box;
     position: relative;
@@ -699,14 +699,14 @@ pre {
     margin-right: auto;
   }
 }
-@media only screen and (max-width: 619px) and (min-width: 620px) {
+@media only screen and (max-width: 319px) and (min-width: 320px) {
   .container-small {
     padding-left: 4.8%;
     padding-right: 4.8%;
     max-width: 688px;
   }
 }
-@media only screen and (max-width: 619px) and (min-width: 800px) {
+@media only screen and (max-width: 319px) and (min-width: 600px) {
   .container-small {
     padding-left: 4.4%;
     padding-right: 4.4%;
@@ -714,7 +714,7 @@ pre {
   }
 }
 
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 600px) {
   .content {
     margin-right: 25.9%;
   }
@@ -888,14 +888,14 @@ pre {
   z-index: 1;
   position: relative;
 }
-@media only screen and (min-width: 620px) {
+@media only screen and (min-width: 320px) {
   .highlight-module__container {
     padding-left: 4.8%;
     padding-right: 4.8%;
     max-width: 688px;
   }
 }
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 600px) {
   .highlight-module__container {
     padding-left: 4.4%;
     padding-right: 4.4%;
@@ -905,7 +905,7 @@ pre {
 .highlight-module__container::before {
   display: none;
 }
-@media only screen and (min-width: 620px) {
+@media only screen and (min-width: 320px) {
   .highlight-module__container::before {
     display: block;
     position: absolute;
@@ -924,7 +924,7 @@ pre {
   right: auto;
   left: 45px;
 }
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 600px) {
   .highlight-module__container::before {
     top: 134px;
     width: 22.2%;
@@ -934,12 +934,12 @@ pre {
     font-size: 430px;
   }
 }
-@media only screen and (min-width: 620px) {
+@media only screen and (min-width: 320px) {
   .highlight-module__container {
     padding-bottom: 52px;
   }
 }
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 600px) {
   .highlight-module__container {
     min-height: 208px;
   }
@@ -955,7 +955,7 @@ pre {
   padding-bottom: 0;
   padding-top: 26px;
 }
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 600px) {
   .highlight-module__title {
     font-family: "Roboto Condensed", Helvetica, sans-serif;
     font-size: 110px;
@@ -966,7 +966,7 @@ pre {
     padding-bottom: 0;
   }
 }
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 600px) {
   .highlight-module__title {
     font-family: "Roboto Condensed", Helvetica, sans-serif;
     font-size: 42px;
@@ -977,7 +977,7 @@ pre {
     padding-bottom: 0;
   }
 }
-@media only screen and (min-width: 800px) and (min-width: 800px) {
+@media only screen and (min-width: 600px) and (min-width: 600px) {
   .highlight-module__title {
     font-family: "Roboto Condensed", Helvetica, sans-serif;
     font-size: 68px;
@@ -1051,7 +1051,7 @@ pre {
 }
 
 /*==========  LEFT  ==========*/
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 600px) {
   .highlight-module--left::after {
     width: 80%;
     right: 20%;
@@ -1059,13 +1059,13 @@ pre {
 }
 
 /*==========  RIGHT  ==========*/
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 600px) {
   .highlight-module--right::after {
     width: 80%;
     left: 20%;
   }
 }
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 600px) {
   .highlight-module--right.highlight-module--code::after {
     width: 100%;
     left: 0;
@@ -1101,7 +1101,7 @@ pre {
   padding-top: 1.3000em;
   padding-bottom: 0;
 }
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 600px) {
   .highlight-module--inline .highlight-module__title {
     font-family: "Roboto Condensed", Helvetica, sans-serif;
     font-size: 26px;
@@ -1408,12 +1408,12 @@ div.highlight > pre > code .il, code .highlight .il {
   overflow: hidden;
 }
 .editorial-header .breadcrumbs {
-  color: #3372df;
+  color: #335898;
 }
 .editorial-header .breadcrumbs a {
-  color: #3372df;
+  color: #335898;
 }
-@media only screen and (min-width: 620px) {
+@media only screen and (min-width: 320px) {
   .editorial-header .container {
     position: relative;
   }
@@ -1454,9 +1454,9 @@ div.highlight > pre > code .il, code .highlight .il {
   padding-top: 0.6190em;
   padding-bottom: 0;
   padding-top: 0;
-  color: #3372df;
+  color: #335898;
 }
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 600px) {
   .editorial-header__subtitle {
     font-family: "Roboto Condensed", Helvetica, sans-serif;
     font-size: 68px;
@@ -1467,7 +1467,7 @@ div.highlight > pre > code .il, code .highlight .il {
     padding-bottom: 0;
   }
 }
-@media only screen and (min-width: 620px) {
+@media only screen and (min-width: 320px) {
   .editorial-header__subtitle {
     padding-top: 0;
     padding-bottom: 26px;
@@ -1480,7 +1480,7 @@ div.highlight > pre > code .il, code .highlight .il {
 .editorial-header__toc ol {
   padding-top: 0;
 }
-@media only screen and (min-width: 620px) {
+@media only screen and (min-width: 320px) {
   .editorial-header__toc ol {
     padding-top: 0;
   }
@@ -1491,7 +1491,7 @@ div.highlight > pre > code .il, code .highlight .il {
   border-bottom: 1px solid #e0e0e0;
   margin-bottom: 13px;
   padding-bottom: 13px !important;
-  color: #3372df;
+  color: #335898;
 }
 
 /**
@@ -1500,7 +1500,7 @@ div.highlight > pre > code .il, code .highlight .il {
 *
 **/
 .summary-header {
-  background-color: #3372df;
+  background-color: #335898;
   padding-bottom: 78px;
   color: #ffffff;
   margin-bottom: 26px;
@@ -1547,7 +1547,7 @@ div.highlight > pre > code .il, code .highlight .il {
   padding-bottom: 0;
   padding-top: 0;
 }
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 600px) {
   .related-guides__title {
     font-family: "Roboto Condensed", Helvetica, sans-serif;
     font-size: 42px;
@@ -1558,7 +1558,7 @@ div.highlight > pre > code .il, code .highlight .il {
     padding-bottom: 0;
   }
 }
-@media only screen and (min-width: 620px) {
+@media only screen and (min-width: 320px) {
   .related-guides__title {
     padding-top: 0;
   }
@@ -1605,7 +1605,7 @@ div.highlight > pre > code .il, code .highlight .il {
 }
 
 .articles-count {
-  color: #3372df;
+  color: #335898;
   font-family: "Roboto Condensed", Helvetica, sans-serif;
   font-weight: 400;
 }
@@ -1613,7 +1613,7 @@ div.highlight > pre > code .il, code .highlight .il {
 .article-section__icon {
   top: -26px;
 }
-@media only screen and (min-width: 620px) {
+@media only screen and (min-width: 320px) {
   .article-section__icon {
     top: -39px;
   }
@@ -1635,10 +1635,10 @@ div.highlight > pre > code .il, code .highlight .il {
 }
 .page-header .breadcrumbs {
   text-align: left;
-  color: #3372df;
+  color: #335898;
 }
 .page-header .breadcrumbs a {
-  color: #3372df;
+  color: #335898;
 }
 .page-header h3 {
   color: rgba(0, 0, 0, 0.87);
@@ -1688,7 +1688,7 @@ div.highlight > pre > code .il, code .highlight .il {
   position: relative;
 }
 
-@media only screen and (max-width: 619px) {
+@media only screen and (max-width: 319px) {
   .featured-spotlight__img {
     padding-top: 58.4%;
     padding-bottom: 0;
@@ -1707,14 +1707,14 @@ div.highlight > pre > code .il, code .highlight .il {
   top: 0;
   margin: 0;
 }
-@media only screen and (min-width: 620px) {
+@media only screen and (min-width: 320px) {
   .featured-spotlight__img img {
     width: auto;
     max-width: none;
     left: 109%;
   }
 }
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 600px) {
   .featured-spotlight__img img {
     left: 107.4%;
   }
@@ -1736,7 +1736,7 @@ div.highlight > pre > code .il, code .highlight .il {
   padding-top: 104px;
   padding-left: 26px;
 }
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 600px) {
   .quote__content {
     font-size: 20px;
     font-weight: 300;
@@ -1746,7 +1746,7 @@ div.highlight > pre > code .il, code .highlight .il {
     padding-bottom: 0;
   }
 }
-@media only screen and (min-width: 620px) {
+@media only screen and (min-width: 320px) {
   .quote__content {
     padding-top: 52px;
     padding-left: 0;
@@ -1770,7 +1770,7 @@ div.highlight > pre > code .il, code .highlight .il {
   left: 26px;
   font-size: 260px;
 }
-@media only screen and (min-width: 620px) {
+@media only screen and (min-width: 320px) {
   .quote__content::before {
     top: 225px;
     left: -210px;
@@ -1809,14 +1809,14 @@ div.highlight > pre > code .il, code .highlight .il {
   font-size: 20px;
   font-weight: 400;
 }
-@media only screen and (min-width: 620px) {
+@media only screen and (min-width: 320px) {
   .article-nav-link::before {
     top: 25px;
     font-size: 26px;
     display: block;
     padding: 13px 10px;
     color: #ffffff;
-    background: #3372df;
+    background: #335898;
   }
 }
 
@@ -1832,7 +1832,7 @@ div.highlight > pre > code .il, code .highlight .il {
   font-family: "icons";
   left: 32px;
 }
-@media only screen and (min-width: 620px) {
+@media only screen and (min-width: 320px) {
   .article-nav-link--prev p {
     padding-left: 52px;
   }
@@ -1842,7 +1842,7 @@ div.highlight > pre > code .il, code .highlight .il {
   font-family: "icons";
   right: 32px;
 }
-@media only screen and (min-width: 620px) {
+@media only screen and (min-width: 320px) {
   .article-nav-link--next p {
     padding-right: 52px;
   }
@@ -1857,7 +1857,7 @@ div.highlight > pre > code .il, code .highlight .il {
   padding-bottom: 0;
   font-weight: 700;
 }
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 600px) {
   .article-nav-count {
     font-family: "Roboto Condensed", Helvetica, sans-serif;
     font-size: 26px;
@@ -1868,7 +1868,7 @@ div.highlight > pre > code .il, code .highlight .il {
     padding-bottom: 0;
   }
 }
-@media only screen and (min-width: 620px) {
+@media only screen and (min-width: 320px) {
   .article-nav-count {
     font-weight: 400;
   }
@@ -1879,7 +1879,7 @@ div.highlight > pre > code .il, code .highlight .il {
 * Text module
 *
 **/
-@media only screen and (min-width: 620px) {
+@media only screen and (min-width: 320px) {
   .did-you-know ol {
     padding-top: 0 !important;
   }
@@ -1892,7 +1892,7 @@ div.highlight > pre > code .il, code .highlight .il {
   position: relative;
   padding-left: 0;
 }
-@media only screen and (min-width: 620px) {
+@media only screen and (min-width: 320px) {
   .did-you-know > .g--half {
     padding-left: 32px;
   }
@@ -1901,14 +1901,14 @@ div.highlight > pre > code .il, code .highlight .il {
 .did-you-know__symbol {
   padding-bottom: 312px;
 }
-@media only screen and (min-width: 620px) {
+@media only screen and (min-width: 320px) {
   .did-you-know__symbol {
     padding-bottom: 26px;
   }
 }
 .did-you-know__symbol::after {
   content: "\e014";
-  color: #3372df;
+  color: #335898;
   font-family: "icons";
   font-size: 300px;
   top: 150px;
@@ -1917,7 +1917,7 @@ div.highlight > pre > code .il, code .highlight .il {
   display: block;
   width: 0;
 }
-@media only screen and (min-width: 620px) {
+@media only screen and (min-width: 320px) {
   .did-you-know__symbol::after {
     position: absolute;
     font-size: 400px;
@@ -1925,7 +1925,7 @@ div.highlight > pre > code .il, code .highlight .il {
     left: 110%;
   }
 }
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 600px) {
   .did-you-know__symbol::after {
     position: absolute;
     font-size: 400px;
@@ -1950,7 +1950,7 @@ div.highlight > pre > code .il, code .highlight .il {
   margin-bottom: 12px;
   border-bottom: 1px solid #e0e0e0;
 }
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 600px) {
   .toc__title {
     font-size: 20px;
     font-weight: 300;
@@ -1960,7 +1960,7 @@ div.highlight > pre > code .il, code .highlight .il {
     padding-bottom: 0;
   }
 }
-@media only screen and (min-width: 620px) {
+@media only screen and (min-width: 320px) {
   .toc__title {
     padding-bottom: 13px;
     margin-bottom: 13px;
@@ -1993,7 +1993,7 @@ div.highlight > pre > code .il, code .highlight .il {
   color: #ffffff;
   position: relative;
 }
-@media only screen and (min-width: 620px) {
+@media only screen and (min-width: 320px) {
   .next-lessons h3 i {
     display: none;
   }
@@ -2003,12 +2003,12 @@ div.highlight > pre > code .il, code .highlight .il {
   position: absolute;
   display: none;
 }
-@media only screen and (min-width: 620px) {
+@media only screen and (min-width: 320px) {
   .next-lessons::before, .next-lessons::after {
     display: inline-block;
   }
 }
-@media only screen and (min-width: 620px) {
+@media only screen and (min-width: 320px) {
   .next-lessons::before {
     content: attr(data-current-lesson);
     font-family: "Roboto Condensed", Helvetica, sans-serif;
@@ -2024,7 +2024,7 @@ div.highlight > pre > code .il, code .highlight .il {
     color: rgba(255, 255, 255, 0.5);
   }
 }
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 600px) {
   .next-lessons::before {
     font-size: 20px;
     padding-left: 15px;
@@ -2033,7 +2033,7 @@ div.highlight > pre > code .il, code .highlight .il {
     right: 230px;
   }
 }
-@media only screen and (min-width: 620px) {
+@media only screen and (min-width: 320px) {
   .next-lessons::after {
     content: "\e00e";
     font-family: "icons";
@@ -2042,7 +2042,7 @@ div.highlight > pre > code .il, code .highlight .il {
     top: 185px;
   }
 }
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 600px) {
   .next-lessons::after {
     font-size: 210px;
     right: 120px;
@@ -2054,7 +2054,7 @@ div.highlight > pre > code .il, code .highlight .il {
 * Grid
 *
 **/
-@media only screen and (min-width: 620px) and (max-width: 799px) {
+@media only screen and (min-width: 320px) and (max-width: 599px) {
   .g-medium--1 {
     float: left;
     margin-right: 4.5%;
@@ -2122,7 +2122,7 @@ div.highlight > pre > code .il, code .highlight .il {
     margin-right: 52.25%;
   }
 }
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 600px) {
   .g-wide--1 {
     float: left;
     margin-right: 3.7%;
@@ -2229,14 +2229,14 @@ div.highlight > pre > code .il, code .highlight .il {
   height: 100%;
   display: block;
 }
-@media only screen and (min-width: 620px) {
+@media only screen and (min-width: 320px) {
   .debug .grid-overlay {
     padding-left: 4.8%;
     padding-right: 4.8%;
     max-width: 688px;
   }
 }
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 600px) {
   .debug .grid-overlay {
     padding-left: 4.4%;
     padding-right: 4.4%;
@@ -2247,12 +2247,12 @@ div.highlight > pre > code .il, code .highlight .il {
   height: 100%;
   background-color: rgba(89, 89, 89, 0.2);
 }
-@media only screen and (min-width: 620px) and (max-width: 799px) {
+@media only screen and (min-width: 320px) and (max-width: 599px) {
   .debug .grid-overlay .g-wide--last {
     display: none;
   }
 }
-@media only screen and (max-width: 619px) {
+@media only screen and (max-width: 319px) {
   .debug .grid-overlay {
     display: none;
   }
@@ -2295,7 +2295,7 @@ h4 {
   padding-top: 1.6250em;
   padding-bottom: 0;
 }
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 600px) {
   .medium,
   h4 {
     font-size: 20px;
@@ -2316,7 +2316,7 @@ h3 {
   padding-top: 1.3000em;
   padding-bottom: 0;
 }
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 600px) {
   .large,
   h3 {
     font-family: "Roboto Condensed", Helvetica, sans-serif;
@@ -2339,7 +2339,7 @@ h2 {
   padding-top: 1.0000em;
   padding-bottom: 0;
 }
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 600px) {
   .xlarge,
   h2 {
     font-family: "Roboto Condensed", Helvetica, sans-serif;
@@ -2362,7 +2362,7 @@ h1 {
   padding-top: 0.6190em;
   padding-bottom: 0;
 }
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 600px) {
   .xxlarge,
   h1 {
     font-family: "Roboto Condensed", Helvetica, sans-serif;
@@ -2384,7 +2384,7 @@ h1 {
   padding-top: 0.3824em;
   padding-bottom: 0;
 }
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 600px) {
   .huge {
     font-family: "Roboto Condensed", Helvetica, sans-serif;
     font-size: 110px;
@@ -2427,20 +2427,20 @@ li > p {
 }
 
 .button--primary {
-  background: #4285f4;
+  background: #335898;
   color: white;
-  border: 1px solid #1266f1;
+  border: 1px solid #264272;
 }
 
 .button--secondary {
   background: white;
-  color: #3372df;
+  color: #335898;
   border: 1px solid #e6e6e6;
 }
 
 .button--secondary-variation {
   background: white;
-  color: #3372df;
+  color: #335898;
   border: 1px solid #e6e6e6;
   border-color: transparent;
 }
@@ -2455,7 +2455,7 @@ ol {
   list-style: none;
   margin: 0;
 }
-@media only screen and (max-width: 619px) {
+@media only screen and (max-width: 319px) {
   ul,
   ol {
     padding-left: 0;
@@ -2613,7 +2613,7 @@ ol.list-links.list-links--secondary a::before {
 }
 
 /*==========  SMALL LIST  ==========*/
-@media only screen and (min-width: 620px) {
+@media only screen and (min-width: 320px) {
   .list-small li {
     font-size: 13px;
     line-height: 2.0000em;
@@ -2643,7 +2643,7 @@ ol.list-links.list-links--secondary a::before {
   padding-bottom: 26px;
   margin-top: 26px;
 }
-@media only screen and (min-width: 620px) {
+@media only screen and (min-width: 320px) {
   .featured-list__item {
     min-height: 338px;
     padding: 52px 32px;
@@ -2662,7 +2662,7 @@ ol.list-links.list-links--secondary a::before {
   padding-top: 26px;
   margin: 0 -5%;
 }
-@media only screen and (min-width: 620px) {
+@media only screen and (min-width: 320px) {
   .featured-list__img-wrapper {
     display: block;
     padding-top: 0;
@@ -2670,7 +2670,7 @@ ol.list-links.list-links--secondary a::before {
   }
 }
 
-@media only screen and (min-width: 620px) {
+@media only screen and (min-width: 320px) {
   .featured-list__img {
     padding-top: 60.8%;
     padding-bottom: 0;
@@ -2685,7 +2685,7 @@ ol.list-links.list-links--secondary a::before {
   margin: 0 auto;
   max-width: 100%;
 }
-@media only screen and (min-width: 620px) {
+@media only screen and (min-width: 320px) {
   .featured-list__img img {
     margin: 0;
     position: absolute;
@@ -2702,12 +2702,12 @@ ol.list-links.list-links--secondary a::before {
   padding-top: 0;
   padding-left: 0;
 }
-@media only screen and (min-width: 620px) {
+@media only screen and (min-width: 320px) {
   .related-guides-list {
     padding-top: 26px;
   }
 }
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 600px) {
   .related-guides-list {
     padding-top: 0;
   }
@@ -2726,7 +2726,7 @@ ol.list-links.list-links--secondary a::before {
 .related-guides-list li:last-child {
   border-color: transparent;
 }
-@media only screen and (min-width: 620px) {
+@media only screen and (min-width: 320px) {
   .related-guides-list li {
     padding-top: 0;
     padding-bottom: 0;
@@ -2772,7 +2772,7 @@ ol.list-links.list-links--secondary a::before {
 .list-guides-intro {
   margin-bottom: 52px;
 }
-@media only screen and (max-width: 619px) {
+@media only screen and (max-width: 319px) {
   .list-guides-intro {
     padding-top: 52px;
   }
@@ -2782,7 +2782,7 @@ ol.list-links.list-links--secondary a::before {
   padding-bottom: 51px;
   margin-bottom: 52px;
 }
-@media only screen and (min-width: 620px) {
+@media only screen and (min-width: 320px) {
   .list-guides-intro li {
     border-color: transparent;
     padding-bottom: 0;
@@ -2799,7 +2799,7 @@ ol.list-links.list-links--secondary a::before {
 *
 **/
 a {
-  color: #3372df;
+  color: #335898;
 }
 
 a:hover {
@@ -2808,7 +2808,7 @@ a:hover {
 
 .cta--primary {
   font-family: "Roboto Condensed", Helvetica, sans-serif;
-  color: #3372df;
+  color: #335898;
   font-weight: 400;
   display: inline-block;
   line-height: 1;
@@ -2828,7 +2828,7 @@ a:hover {
 
 .cta--secondary {
   font-family: "Roboto Condensed", Helvetica, sans-serif;
-  color: #3372df;
+  color: #335898;
   font-weight: 400;
   display: inline-block;
   line-height: 1;
@@ -2847,7 +2847,7 @@ table {
   width: 100%;
 }
 table thead {
-  background: #3372df;
+  background: #335898;
   color: #ffffff;
 }
 table th {
@@ -2860,7 +2860,7 @@ table th {
   padding-top: 1.6250em;
   padding-bottom: 0;
 }
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 600px) {
   table th {
     font-size: 20px;
     font-weight: 300;
@@ -2870,7 +2870,7 @@ table th {
     padding-bottom: 0;
   }
 }
-@media only screen and (min-width: 620px) {
+@media only screen and (min-width: 320px) {
   table tr {
     border-bottom: 1px solid #ffffff;
   }
@@ -2887,7 +2887,7 @@ table td::before {
   content: attr(data-th) " :";
   display: inline-block;
   color: #ffffff;
-  background: #3372df;
+  background: #335898;
   border-right: 2px solid #ffffff;
   position: absolute;
   top: 0;
@@ -2901,7 +2901,7 @@ table td::before {
   padding-left: 13px;
   padding-top: 13px;
 }
-@media only screen and (min-width: 620px) {
+@media only screen and (min-width: 320px) {
   table td::before {
     display: none;
   }
@@ -2911,20 +2911,20 @@ table td {
   position: relative;
   padding-left: 140px;
 }
-@media only screen and (min-width: 620px) {
+@media only screen and (min-width: 320px) {
   table th,
   table td {
     display: table-cell;
   }
 }
-@media only screen and (min-width: 620px) {
+@media only screen and (min-width: 320px) {
   table th {
     padding: 26px;
     padding-top: 13px;
     padding-bottom: 12px;
   }
 }
-@media only screen and (min-width: 620px) {
+@media only screen and (min-width: 320px) {
   table td {
     padding: 26px;
     padding-bottom: 25px;
@@ -2941,7 +2941,7 @@ td:last-child::after {
   bottom: 0;
   width: 100%;
 }
-@media only screen and (min-width: 620px) {
+@media only screen and (min-width: 320px) {
   td:last-child::after {
     display: none;
   }
@@ -2950,12 +2950,12 @@ td:last-child::after {
 .table-2 col {
   width: 344px;
 }
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 600px) {
   .table-2 col {
     width: 432px;
   }
 }
-@media only screen and (min-width: 620px) {
+@media only screen and (min-width: 320px) {
   .table-2 th:first-child,
   .table-2 td:first-child {
     border-right: 2px solid #ffffff;
@@ -2965,12 +2965,12 @@ td:last-child::after {
 .table-3 col {
   width: 229.3333333333px;
 }
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 600px) {
   .table-3 col {
     width: 288px;
   }
 }
-@media only screen and (min-width: 620px) {
+@media only screen and (min-width: 320px) {
   .table-3 th:nth-child(2),
   .table-3 td:nth-child(2) {
     border-left: 2px solid #ffffff;
@@ -2981,12 +2981,12 @@ td:last-child::after {
 .table-4 col {
   width: 172px;
 }
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 600px) {
   .table-4 col {
     width: 216px;
   }
 }
-@media only screen and (min-width: 620px) {
+@media only screen and (min-width: 320px) {
   .table-4 th:nth-child(2), .table-4 th:nth-child(3),
   .table-4 td:nth-child(2),
   .table-4 td:nth-child(3) {
@@ -3021,7 +3021,7 @@ object {
   position: relative;
   z-index: 1;
 }
-@media only screen and (min-width: 620px) {
+@media only screen and (min-width: 320px) {
   .breadcrumbs {
     display: block;
   }
@@ -3046,7 +3046,7 @@ object {
   font-weight: 400;
   padding-top: 0;
 }
-@media only screen and (min-width: 620px) {
+@media only screen and (min-width: 320px) {
   .breadcrumbs__link {
     padding-top: 0;
   }
@@ -3107,7 +3107,7 @@ object {
 .articles-list__item:first-child {
   padding-top: 0;
 }
-@media only screen and (min-width: 620px) {
+@media only screen and (min-width: 320px) {
   .articles-list__item:first-child {
     padding-top: 24px;
   }
@@ -3124,7 +3124,7 @@ object {
 .guides-list {
   overflow: hidden;
 }
-@media only screen and (min-width: 620px) {
+@media only screen and (min-width: 320px) {
   .guides-list {
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -3145,7 +3145,7 @@ object {
   margin-top: 26px;
   margin-bottom: 0;
 }
-@media only screen and (min-width: 620px) {
+@media only screen and (min-width: 320px) {
   .guides-list__item {
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -3164,7 +3164,7 @@ object {
 .guides-list__item p {
   margin: 26px 32px 0;
 }
-@media only screen and (min-width: 620px) {
+@media only screen and (min-width: 320px) {
   .guides-list__item .primary-content {
     -webkit-flex: 1;
         -ms-flex: 1;
@@ -3176,7 +3176,7 @@ object {
   margin-top: 51px;
   border-top: 1px solid #e0e0e0;
 }
-@media only screen and (min-width: 620px) {
+@media only screen and (min-width: 320px) {
   .guides-list__item .secondary-content {
     width: 100%;
   }
@@ -3236,7 +3236,7 @@ object {
   font-size: 26px;
   font-weight: 700;
 }
-@media only screen and (min-width: 620px) {
+@media only screen and (min-width: 320px) {
   .icon-circle span,
   .icon-circle--large span {
     font-size: 42px;
@@ -3252,12 +3252,12 @@ object {
 .icon-circle--large i {
   font-size: 26px;
 }
-@media only screen and (min-width: 620px) {
+@media only screen and (min-width: 320px) {
   .icon-circle--large i {
     font-size: 42px;
   }
 }
-@media only screen and (min-width: 620px) {
+@media only screen and (min-width: 320px) {
   .icon-circle--large {
     padding: 37px;
     border: 2px solid #ffffff;
@@ -3289,7 +3289,7 @@ object {
   padding: 13px;
   margin: 0 auto;
 }
-@media only screen and (min-width: 620px) {
+@media only screen and (min-width: 320px) {
   .icon-circle--nav {
     padding: 22px;
     margin-top: 4px;
@@ -3306,7 +3306,7 @@ object {
   color: #ffffff;
   font-size: 16px;
 }
-@media only screen and (min-width: 620px) {
+@media only screen and (min-width: 320px) {
   .icon-circle--nav i {
     font-size: 26px;
   }
@@ -3522,7 +3522,7 @@ object {
 
 /*==========  COLORS  ==========*/
 .color--blue {
-  color: #3372df;
+  color: #335898;
 }
 
 .color--red {
@@ -3538,7 +3538,7 @@ object {
 }
 
 .color--blue-secondary {
-  color: #b7cdf4;
+  color: #8ca8d8;
 }
 
 .color--red-secondary {
@@ -3574,7 +3574,7 @@ object {
 }
 
 .color--highlight {
-  color: #3372df;
+  color: #335898;
 }
 
 .color--warning {
@@ -3956,8 +3956,8 @@ main {
   left: 50%;
   top: 50%;
   padding: 25px;
-  max-width: 50%;
-  min-width: 40%;
+  max-width: 60%;
+  min-width: 18.75em;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   border-radius: 2px;
@@ -3985,25 +3985,61 @@ input[type="text"], input[type="email"], input[type="password"] {
   padding: .5em;
   margin-bottom: .5em;
   border: 1px solid #ccc;
+  width: 100%;
 }
 
-input {
+input, textarea {
   font-weight: normal;
   outline: none;
 }
-input.ng-dirty.ng-invalid {
+input.ng-dirty.ng-invalid, textarea.ng-dirty.ng-invalid {
   border-color: red;
   box-shadow: 0px 0px 2px red;
 }
-input.ng-dirty.ng-valid {
+input.ng-dirty.ng-valid, input:focus, textarea.ng-dirty.ng-valid, textarea:focus {
   border-color: green;
   box-shadow: 0px 0px 2px green;
 }
-input:disabled, input:disabled:hover {
+input:disabled, input:disabled:hover, textarea:disabled, textarea:disabled:hover {
   background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAIklEQVQIW2NkQAKrVq36zwjjgzhhYWGMYAEYB8RmROaABADeOQ8CXl/xfgAAAABJRU5ErkJggg==) repeat;
   color: #333;
   border-color: #ddd;
   cursor: not-allowed;
+}
+
+.chain, .streak:first-child .chain:first-child, .streak:last-child .chain:last-child {
+  background: url("../images/chain.png") no-repeat top left;
+  width: 100px;
+  height: 43px;
+  display: inline-block;
+}
+.chain.break, .streak:first-child .chain:first-child.break, .streak:last-child .chain:last-child.break {
+  background-image: url("../images/chain-break.png");
+}
+
+.streak:first-child .chain:first-child {
+  background-image: url("../images/chain-begin.png");
+}
+
+.streak:last-child .chain:last-child {
+  background-image: url("../images/chain-end.png");
+}
+
+.m1 {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.mt1 {
+  margin-top: 1em;
+}
+
+.mb1 {
+  margin-bottom: 1em;
+}
+
+.center-text {
+  text-align: center;
 }
 
 .fright {
@@ -4011,7 +4047,7 @@ input:disabled, input:disabled:hover {
 }
 
 .fleft {
-  float: leftt;
+  float: left;
 }
 
 /** Larger Screens - desktops and tablets **/

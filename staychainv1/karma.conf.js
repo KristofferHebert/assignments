@@ -15,11 +15,10 @@ module.exports = function (config) {
 
         // list of files / patterns to load in the browser
         files: [
-            'app/bower_components/jquery/dist/jquery.min.js',
-            'app/bower_components/angular/angular.min.js',
-            'app/app/bower_components/angular-mocks/angular-mocks.js',
-            'app/bower_components/angular/angular.min.js',
-            'app/bower_components/angular-mocks/angular-mocks.js',
+            'app/lib/jquery/dist/jquery.min.js',
+            'app/lib/angular/angular.min.js',
+            'app/lib/angular/angular.min.js',
+            'app/lib/angular-mocks/angular-mocks.js',
             'app/*.js', // this will pick up both spec and app
             'app/*.html' // for our directive templates
         ],
