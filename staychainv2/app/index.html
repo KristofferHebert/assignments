@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="" ng-app="main">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="A front-end template that helps you build fast, modern mobile web apps.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>stay chain | simple habit tracker</title>
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="icon" sizes="192x192" href="images/touch/chrome-touch-icon-192x192.png">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Web Starter Kit">
+    <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png">
+
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
+    <meta name="msapplication-TileColor" content="#3372DF">
+
+    <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
+    <!--
+    <link rel="canonical" href="http://www.example.com/">
+    -->
+
+    <!-- Page styles -->
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body>
+    <header class="app-bar promote-layer">
+        <div class="app-bar-container">
+            <button class="menu">
+                <img src="images/hamburger.svg" alt="Menu">
+            </button>
+            <h1 class="logo"><a href="/">stay chain</a>
+            </h1>
+        </div>
+    </header>
+
+
+
+    <section ng-controller="portalCtrl">
+        <nav class="navdrawer-container promote-layer">
+            <h4>Menu</h4>
+            <ul>
+                <li ng-if="userService.signedIn()"><a href='/#/{{currentUser.username}}'>My Goal</a>
+                </li>
+                <li ng-hide="userService.signedIn()"><a ng-click="toggleModal('showLogin')">Login</a>
+                </li>
+                <li ng-if="userService.signedIn()"><a ng-click="toggleModal('showLogOut')">Log out</a>
+                </li>
+                <li ng-hide="userService.signedIn()"><a href="/">Sign up</a>
+                </li>
+            </ul>
+        </nav>
+        <section ng-if='showModal' class="modal-view-container">
+            <div ng-class="{'visible':showModal,'modal':true}">
+                <div class="modal-view-details">
+                    <a class="close-modal" ng-click="toggleModal('resetModal')">Close <i class="icon icon-close fright"></i>
+                    </a>
+                    <form id="loginForm" name="loginForm" ng-if="selectModal.login" novalidate>
+                        <h3>Login</h3>
+                        <div class="clear">
+                            <label for="" class="g-wide--1 hidden">Email</label>
+                            <input type="email" name="email" class="g-wide--full" placeholder="Email" ng-model="user.email" required>
+                        </div>
+                        <div class="clear">
+                            <label for="" class="g-wide--1 hidden">Password</label>
+                            <input type="password" name="email" class="g-wide--full" placeholder="Password" ng-model="user.password" required>
+                        </div>
+                        <input type="submit" class="button button--primary g-wide--full" value="Login" ng-click="login(user)" ng-disabled="loginForm.$invalid">
+                    </form>
+                    <form id="breakForm" name="breakForm" ng-if="selectModal.breakchain" novalidate>
+                        <h2>Break Chain</h2>
+                        <div class="clear">
+                            <label for="" class="g-wide--1 hidden">Email</label>
+                            <textarea name="breakReason" class="g-wide--full ]" placeholder="I'm breaking this chain because..." ng-model="breakReason" required></textarea>
+                        </div>
+                        <input type="submit" class="button button--primary g-wide--full" value="Break Chain" ng-click="breakChain(breakReason)" ng-disabled="breakForm.$invalid">
+                    </form>
+                    <span ng-if="message" ng-class="message.class">{{message}}</span>
+                </div>
+            </div>
+        </section>
+    </section>
+    <main ng-controller="mainCtrl">
+        <div ng-view class="ng-cloak"></div>
+    </main>
+    <script src="scripts/lib/angular/angular.min.js"></script>
+    <script src="scripts/lib/angular-route/angular-route.min.js"></script>
+    <script src="scripts/lib/firebase/firebase.js"></script>
+    <script src="scripts/lib/angularfire/dist/angularfire.min.js"></script>
+    <script src="https://cdn.firebase.com/js/simple-login/1.6.3/firebase-simple-login.js"></script>
+
+    <!-- build:js scripts/main.min.js -->
+    <script src="scripts/main.js"></script>
+    <script src="scripts/controllers.js"></script>
+    <script src="scripts/factories.js"></script>
+    <script src="scripts/directives.js"></script>
+    <script src="scripts/filters.js"></script>
+    <!-- endbuild -->
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+    <script>
+    (function(i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function() {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'UA-XXXXX-X', 'auto');
+    ga('send', 'pageview');
+    </script>
+
+</body>
+
+</html>

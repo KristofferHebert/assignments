@@ -1,0 +1,23 @@
+<div ng-if='UserHomeData.username'>
+    <h3>Hello {{UserHomeData.username}}</h3>
+    <section ng-hide="goals[0]">
+        <h3>Please add a goal.</h3>
+        <form id="startchain" name="startchain" novalidate>
+            <textarea name="chainDescription" class="g-wide--full" rows="4" cols="50" placeholder="I want too..." ng-model="field.chainDescription" required focus></textarea>
+            <input ng-if="userService.signedIn()" class="button--primary g-wide--full" type="submit" value="Start Chain" ng-click="chain.startChain(field.chainDescription)" />
+        </form>
+    </section>
+    <section ng-if="goals[0]">
+        <h2 class="mb1">Goal: {{goals[0].summary}}</h2>
+        <p class="center-text" ng-if="goals[0].chains.length == 1">You just started, checkback to see your chain grow!</p>
+        <high-score data="goals[0].record" ng-if="goals[0].chains.length > 1"></high-score>
+        <chain-link data="goals[0].chains"></chain-link>
+        <p class="centered">Started {{goals[0].chains[0].start | date:'fullDate'}}</p>
+        <div class="clear">
+            <button id="breakchain" ng-click="showBreak()" class="button button--primary g-wide--full centered" ng-if="userService.signedIn() && canEdit()">Break chain</button>
+        </div>
+    </section>
+</div>
+<div ng-show='!UserHomeData.username'>
+    <h1>User does not exist</h1>
+</div>

@@ -1,0 +1,499 @@
+/*
+ * Web Starter Kit
+ *
+ * Multi-screen layout styles for your page. Brought to you by the
+ * Web Starter Kit team.
+ *
+ */
+
+@import'_h5bp';
+/*
+ * Visual Style Guide styles
+ * Remove if you prefer to use a CSS library, like Bootstrap
+ */
+
+@import'components/components';
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+body {
+    position: relative;
+    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+    font-weight: 300;
+    background-color: #fff;
+    box-sizing: border-box;
+    min-height: 100%;
+}
+body.open {
+    overflow: hidden;
+}
+.app-bar {
+    display: block;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: $colorBlue;
+    overflow: hidden;
+    z-index: 1;
+}
+.app-bar-container {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    height: 60px;
+    position: relative;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    margin: 0 auto;
+}
+.app-bar.open, .app-bar.open ~ main {
+    -webkit-transform: translate(250px, 0);
+    transform: translate(250px, 0);
+}
+.app-bar .logo {
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    font-size: 2em;
+    line-height: 60px;
+    margin: 0 16px;
+    padding: 0;
+    color: #fefefe;
+    float: none;
+    max-width: none;
+    font-weight: 300;
+    display: initial;
+}
+.app-bar .logo a {
+    text-decoration: none;
+    color: inherit;
+    font-weight: 100;
+}
+.app-bar-actions {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    z-index: 2;
+}
+.app-bar button {
+    width: 60px;
+    height: 60px;
+    background-image: none;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    display: inline-block;
+    -webkit-transition: background-color 0.2s ease-out;
+    transition: background-color 0.2s ease-out;
+    -webkit-tap-highlight-color: transparent;
+}
+.app-bar button img {
+    height: 24px;
+    width: 24px;
+}
+.app-bar button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+.app-bar button:focus {
+    background-color: rgba(255, 255, 255, 0.2);
+    outline: 0;
+}
+.app-bar button:active {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+.promote-layer {
+    /*
+  This may promote the layer to a composited
+  layer.
+
+  Replace with will-change when available
+
+  #perfmatters
+  */
+    
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+.base, p, ul, ol {
+    font-size: 19px;
+}
+.navdrawer-container {
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 250px;
+    height: 100%;
+    background-color: $colorBlue;
+    color: #fefefe;
+    -webkit-transform: translate(-250px, 0);
+    transform: translate(-250px, 0);
+    overflow-y: auto;
+}
+.navdrawer-container.open {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+}
+.app-bar, .navdrawer-container.opened, main {
+    -webkit-transition: -webkit-transform 0.3s ease-out;
+    transition: transform 0.3s ease-out;
+}
+.navdrawer-container h4, .navdrawer-container ul li a {
+    height: 60px;
+    padding: 17px 20px;
+    line-height: 1.4;
+}
+.navdrawer-container h4 {
+    background-color: white;
+    background-color: $colorBlue;
+}
+.navdrawer-container ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+.navdrawer-container ul li a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    -webkit-transition: background-color 0.2s ease-out;
+    transition: background-color 0.2s ease-out;
+    white-space: nowrap;
+}
+.navdrawer-container ul li {
+    border-bottom-style: solid;
+    border-width: 1px;
+    border-color: white;
+    padding: 0;
+}
+.navdrawer-container ul li::before {
+    content: none;
+}
+.navdrawer-container ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+.navdrawer-container ul li a:focus {
+    background-color: rgba(255, 255, 255, 0.3);
+    outline: 0;
+}
+.navdrawer-container ul li a:active {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+main {
+    margin: 0 auto;
+    /* Height of the header */
+    
+    padding: 60px 16px 16px 16px;
+    min-height: 100%;
+}
+.modal-view-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    position: relative;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    z-index: 999;
+    pointer-events: none;
+}
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    opacity: 0;
+    -webkit-transform: scale(1.15);
+    transform: scale(1.15);
+    -webkit-transition: -webkit-transform 0.1s cubic-bezier(0.465, 0.183, 0.153, 0.946), opacity 0.1s cubic-bezier(0.465, 0.183, 0.153, 0.946);
+    transition: transform 0.1s cubic-bezier(0.465, 0.183, 0.153, 0.946), opacity 0.1s cubic-bezier(0.465, 0.183, 0.153, 0.946);
+    will-change: transform, opacity;
+    &.visible {
+        pointer-events: auto;
+        opacity: 1;
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.465, 0.183, 0.153, 0.946), opacity 0.3s cubic-bezier(0.465, 0.183, 0.153, 0.946);
+        transition: transform 0.3s cubic-bezier(0.465, 0.183, 0.153, 0.946), opacity 0.3s cubic-bezier(0.465, 0.183, 0.153, 0.946);
+    }
+    &:after {
+        position: fixed;
+        background: rgba(0, 0, 0, 0.4);
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        display: block;
+        content: '';
+    }
+}
+.modal-view-details {
+    background: #FFF;
+    z-index: 2;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    padding: 25px;
+    max-width: 60%;
+    min-width: 18.75em;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    border-radius: 2px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
+    text-align: center;
+}
+.close-modal {
+    background: #666;
+    margin: -25px -25px 25px -25px;
+    border: 0;
+    display: block;
+    line-height: 16px;
+    padding: 16px;
+    float: none;
+    cursor: pointer;
+}
+a.close-modal, a.close-modal:hover {
+    color: #fff;
+    text-decoration: none;
+}
+input[type="text"], input[type="email"], input[type="password"] {
+    padding: .5em;
+    margin-bottom: .5em;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+input, textarea {
+    font-weight: normal;
+    outline: none;
+    &.ng-dirty.ng-invalid {
+        border-color: red;
+        -webkit-box-shadow: 0px 0px 2px red;
+        box-shadow: 0px 0px 2px red;
+    }
+    &.ng-dirty.ng-valid, &:focus {
+        border-color: green;
+        -webkit-box-shadow: 0px 0px 2px green;
+        box-shadow: 0px 0px 2px green;
+    }
+    &:disabled, &:disabled:hover {
+        background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAIklEQVQIW2NkQAKrVq36zwjjgzhhYWGMYAEYB8RmROaABADeOQ8CXl/xfgAAAABJRU5ErkJggg==) repeat;
+        color: #333;
+        border-color: #ddd;
+        cursor: not-allowed;
+    }
+}
+// chain
+.chain, .streak:first-child .chain:first-child, .streak:last-child .chain:last-child {
+    background: url('../images/chain.png') no-repeat top left;
+    width: 98px;
+    height: 50px;
+    position: relative;
+    display: inline-block;
+    &.break {
+        background-image: url('../images/chain-break.png');
+    }
+}
+.streak:first-child .chain:first-child {
+    background-image: url('../images/chain-begin.png');
+}
+.streak:last-child .chain:last-child {
+    background-image: url('../images/chain-end.png');
+}
+.reason {
+    position: absolute;
+    z-index: 999;
+    background: rgba(0, 0, 0, .91);
+    padding: 1em;
+    color: #FFF;
+    width: 196px;
+    border-radius: .8em;
+    left: -50px;
+    top: -50px;
+    text-align: center;
+    display: none;
+}
+.reason:after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -8px;
+    width: 0;
+    height: 0;
+    border-top: 8px solid #000000;
+    border-right: 8px solid transparent;
+    border-left: 8px solid transparent;
+}
+.chain:hover .reason {
+    display: block;
+}
+.m1 {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+.mt1 {
+    margin-top: 1em;
+}
+.mb1 {
+    margin-bottom: 1em;
+}
+.center-text {
+    text-align: center;
+}
+.fright {
+    float: right;
+}
+.fleft {
+    float: left;
+}
+.nospace {
+    margin: 0;
+    padding: 0;
+}
+.topscore {
+    text-align: center;
+    background-color: #3e6289;
+    color: #fff;
+    border-radius: .8em;
+    margin-bottom: 2em;
+    padding-bottom: .8em;
+}
+.bold {
+    font-weight: bold;
+}
+/** Larger Screens - desktops and tablets **/
+
+@media all and (min-width: 990px) {
+    .app-bar {
+        position: relative;
+    }
+    .app-bar.open, .app-bar.open ~ main {
+        -webkit-transform: translate(0px, 0);
+        transform: translate(0px, 0);
+    }
+    .app-bar-container {
+        display: block;
+        height: 100px;
+        max-width: 820px;
+        padding: 0 16px;
+        box-sizing: border-box;
+        background-color: $colorBlue;
+    }
+    .app-bar .logo {
+        line-height: inherit;
+        width: 260px;
+        height: 80px;
+        margin: 10px auto 0;
+        display: block;
+    }
+    .app-bar .logo a {
+        float: none;
+        display: block;
+        height: 80px;
+        background: url('../images/logo.png') no-repeat;
+        text-indent: -999em;
+        overflow: hidden;
+    }
+    .app-bar-actions {
+        float: right;
+    }
+    .app-bar::after {
+        content: ' ';
+        display: block;
+        height: 0;
+        overflow: hidden;
+        clear: both;
+    }
+    button.menu {
+        display: none;
+    }
+    .navdrawer-container {
+        position: relative;
+        width: 100%;
+        height: auto;
+        margin-top: 0;
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0);
+        -webkit-transition: none;
+        transition: none;
+        overflow-y: auto;
+    }
+    .navdrawer-container h4 {
+        display: none;
+    }
+    .navdrawer-container ul {
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        max-width: 820px;
+        margin: 0 auto;
+        -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+        flex-direction: row;
+    }
+    .navdrawer-container ul li {
+        border: none;
+        cursor: pointer;
+    }
+    main {
+        max-width: 820px;
+        padding-top: 0;
+        min-height: initial;
+    }
+    body {
+        overflow-y: scroll;
+    }
+}
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 300;
+    src: url(/fonts/OpenSans-Light.eot);
+    src: local('Open Sans Light'), local('OpenSans-Light'), url(/fonts/OpenSans-Light.eot) format('embedded-opentype'), url(/fonts/OpenSans-Light.woff) format('woff');
+}
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: url(/fonts/OpenSans-Regular.eot);
+    src: local('Open Sans Regular'), local('OpenSans-Regular'), url(/fonts/OpenSans-Regular.eot) format('embedded-opentype'), url(/fonts/OpenSans-Regular.woff) format('woff');
+}
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    src: url(/fonts/OpenSans-Bold.eot);
+    src: local('Open Sans Regular'), local('OpenSans-Bold'), url(/fonts/OpenSans-Bold.eot) format('embedded-opentype'), url(/fonts/OpenSans-Bold.woff) format('woff');
+}
+@font-face {
+    font-family: 'Open Sans';
+    font-style: italic;
+    font-weight: 300;
+    src: url(/fonts/OpenSans-LightItalic.eot);
+    src: local('Open Sans Light Italic'), local('OpenSans-LightItalic'), url(/fonts/OpenSans-LightItalic.eot) format('embedded-opentype'), url(/fonts/OpenSans-LightItalic.woff) format('woff');
+}
+@font-face {
+    font-family: 'Open Sans';
+    font-style: italic;
+    font-weight: 400;
+    src: url(/fonts/OpenSans-Italic.eot);
+    src: local('Open Sans Italic'), local('OpenSans-Italic'), url(/fonts/OpenSans-Italic.eot) format('embedded-opentype'), url(/fonts/OpenSans-Italic.woff) format('woff');
+}
+@font-face {
+    font-family: 'Open Sans';
+    font-style: italic;
+    font-weight: 700;
+    src: url(/fonts/OpenSans-BoldItalic.eot);
+    src: local('Open Sans Bold Italic'), local('OpenSans-BoldItalic'), url(/fonts/OpenSans-BoldItalic.eot) format('embedded-opentype'), url(/fonts/RobotoCondensed-BoldItalic.woff) format('woff');
+}

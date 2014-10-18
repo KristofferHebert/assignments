@@ -1,0 +1,4 @@
+<section>
+    <div ng-if='message'>{{message}}</div>
+    <span ng-repeat="chain in chains" ng-bind-html="renderChainLinks(chain) | sanitize" class="streak"></span>
+</section>
