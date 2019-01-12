@@ -135,7 +135,6 @@ angular.module('main.factories', [])
                         userSchema.username = user.username;
                         userSchema.email = user.email;
                         userSchema.goals = [];
-                        userSchema.md5_hash = authUser.md5_hash;
                         userSchema.$priority = authUser.uid;
                         userSchema.$save();
                     });

@@ -49,4 +49,21 @@ angular.module('main.directives', [])
                 }, 10);
             }
         };
-    }]);
+    }])
+    .directive('modal', ['$timeout', function ($timeout) {
+        return {
+            restrict: 'E',
+            transclude: true,
+            templateUrl: '../partials/modal.html',
+            scope: {
+                show: '=show',
+                modals: '=modals'
+            },
+            controller: function ($scope) {
+                $scope.toggleModal = function (selectedFunction, message, time) {
+                    $scope.show = !$scope.show;
+                    $scope[selectedFunction](message, time);
+                };
+            }
+        };
+    }])

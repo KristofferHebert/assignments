@@ -76,14 +76,12 @@
 /*
   todo
   fix broken minfied code
-  fix css for mobile tablet
   move bulky code away from controllers
   add chain link record length
   create unit tests
   add logic to prevent duplicate usernames
   move menu js to directive
   move modal code from portcrl to modal directive
-  break up controllers, services, directives, into seperate js files
   make sure code can be minified
   tidy up controllers
   move timeout to modal flash message function
@@ -92,6 +90,8 @@
   fix firebase goals array bugs
 
   DONE
+  fix css for mobile tablet
+  break up controllers, services, directives, into seperate js files
   fix repeatPassord
   add graphic for chains
   prevent other users from breaking chains that are not their own
